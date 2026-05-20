@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99e (TeX Live 2026/Homebrew)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plainnat.bst
+Database file #1: bibliography/refs.bib
+Warning--I didn't find a database entry for "glorot2010"
+Warning--I didn't find a database entry for "sutskever2012"
+Warning--I didn't find a database entry for "kingma2014adam"
+Warning--I didn't find a database entry for "chen2023lion"
+Warning--I didn't find a database entry for "ioffe2015batch"
+Warning--I didn't find a database entry for "hochreiter1997lstm"
+Warning--I didn't find a database entry for "cho2014gru"
+Warning--I didn't find a database entry for "bahdanau2015attention"
+You've used 7 entries,
+            2773 wiz_defined-function locations,
+            646 strings with 6149 characters,
+and the built_in function-call counts, 3405 in all, are:
+= -- 290
+> -- 235
+< -- 4
++ -- 79
+- -- 72
+* -- 283
+:= -- 538
+add.period$ -- 25
+call.type$ -- 7
+change.case$ -- 44
+chr.to.int$ -- 7
+cite$ -- 14
+duplicate$ -- 137
+empty$ -- 260
+format.name$ -- 83
+if$ -- 698
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 6
+newline$ -- 47
+num.names$ -- 28
+pop$ -- 94
+preamble$ -- 1
+purify$ -- 38
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 89
+swap$ -- 9
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 0
+while$ -- 27
+width$ -- 0
+write$ -- 103
+(There were 8 warnings)

@@ -1,0 +1,153 @@
+%============================================================
+%  Deep Learning – Note di Studio
+%  Politecnico di Bari – Prof. Vito Walter Anelli
+%  Compatibile con Overleaf (pdflatex)
+%============================================================
+\documentclass[12pt, a4paper]{report}
+
+% --- Encoding e lingua ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[provide=*,italian]{babel}
+
+% --- Layout ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{1.2em}
+
+% --- Matematica ---
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{bm}
+
+% --- Grafica ---
+\usepackage{graphicx}
+\usepackage{float}
+
+% --- Tabelle ---
+\usepackage{booktabs}
+\usepackage{array}
+
+% --- Colori e link ---
+\usepackage{xcolor}
+\usepackage[colorlinks=true, linkcolor=blue!60!black,
+            citecolor=green!50!black, urlcolor=blue]{hyperref}
+
+% --- Liste ---
+\usepackage{enumitem}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% --- Intestazioni ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\itshape Deep Learning}
+\fancyhead[R]{\small\itshape\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Codice ---
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{gray!10},
+  frame=single, rulecolor=\color{gray!40},
+  breaklines=true,
+  keywordstyle=\color{blue!70!black}\bfseries,
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red!60!black},
+  numbers=left, numberstyle=\tiny\color{gray},
+}
+
+% --- Ambienti semplici ---
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+\newenvironment{definizione}[1][]{%
+  \par\smallskip\noindent
+  \textbf{Definizione\ifx&#1&\else\ (#1)\fi.}\quad\itshape
+}{\par\smallskip}
+
+\newenvironment{osservazione}{%
+  \par\smallskip\noindent
+  \textbf{Osservazione.}\quad
+}{\par\smallskip}
+
+\newenvironment{attenzione}{%
+  \par\smallskip\noindent
+  \textbf{Attenzione.}\quad\itshape
+}{\par\smallskip}
+
+% --- Riferimenti bibliografici ---
+\usepackage[round, authoryear, sort]{natbib}
+\newcommand{\parencite}[1]{\citep{#1}}
+
+% --- Comandi matematici ---
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\matr}[1]{\boldsymbol{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\DeclareMathOperator{\softmax}{softmax}
+\DeclareMathOperator{\relu}{ReLU}
+
+% --- Riferimenti alle fonti ---
+\newcommand{\refbishop}[1]{\textsuperscript{[B\,#1]}}
+\newcommand{\reflecun}[1]{\textsuperscript{[NYU\,#1]}}
+
+%============================================================
+\begin{document}
+
+% --- Frontespizio ---
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\LARGE\bfseries Deep Learning}\\[0.5cm]
+  {\large Note di Studio}\\[1.5cm]
+  {\normalsize Basato sulle slide del Prof.\ \textbf{Vito Walter Anelli}\\
+  Politecnico di Bari -- SisInf Lab}\\[1cm]
+\end{titlepage}
+
+% --- Prefazione ---
+\chapter*{Prefazione}
+\addcontentsline{toc}{chapter}{Prefazione}
+
+Queste note sono redatte come supporto allo studio del corso di
+\textbf{Deep Learning} del Prof.\ Vito Walter Anelli (Politecnico di Bari).
+Il testo integra le slide ufficiali del corso con due risorse fondamentali:
+\textit{NYU-DLSP21} \citep{lecun2021} di LeCun e Canziani e
+\textit{Deep Learning: Foundations and Concepts} \citep{bishop2024}
+di Bishop \& Bishop.
+
+Nel testo, le etichette \textsuperscript{[B\,X]} rimandano al capitolo X del
+libro Bishop, mentre \textsuperscript{[NYU\,Y]} alla settimana Y del corso NYU.
+
+% --- Indice ---
+\tableofcontents
+\newpage
+
+%============================================================
+% CAPITOLI
+%============================================================
+\input{chapters/ch00_introduction}
+\input{chapters/ch01_basic_architectures}
+\input{chapters/ch02_learning_representations}
+\input{chapters/ch03_activation_functions}
+\input{chapters/ch04_loss_functions}
+\input{chapters/ch05_optimization}
+\input{chapters/ch06_normalization}
+\input{chapters/ch07_convolutional_networks}
+\input{chapters/ch08_recurrent_networks}
+
+
+% --- aggiungere qui i prossimi capitoli ---
+% \input{chapters/ch02_learning_representations}
+% \input{chapters/ch03_activation_functions}
+% ...
+
+%============================================================
+% BIBLIOGRAFIA
+%============================================================
+\bibliographystyle{plainnat}
+\bibliography{bibliography/refs}
+
+\end{document}

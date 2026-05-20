@@ -1,0 +1,47 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[AI(2023)]{mixtral2023}
+Mistral AI.
+\newblock Mixtral of experts.
+\newblock \url{https://arxiv.org/abs/2401.04088}, 2023.
+
+\bibitem[Bishop and Bishop(2024)]{bishop2024}
+Christopher~M. Bishop and Hugh Bishop.
+\newblock \emph{Deep Learning: Foundations and Concepts}.
+\newblock Springer Nature, 2024.
+\newblock ISBN 978-3-031-45467-7.
+\newblock URL \url{https://www.bishopbook.com}.
+\newblock Freely available online at \url{https://www.bishopbook.com}.
+
+\bibitem[Jacobs et~al.(1991)Jacobs, Jordan, Nowlan, and Hinton]{jacobs1991}
+Robert~A. Jacobs, Michael~I. Jordan, Steven~J. Nowlan, and Geoffrey~E. Hinton.
+\newblock Adaptive mixtures of local experts.
+\newblock \emph{Neural Computation}, 3\penalty0 (1):\penalty0 79--87, 1991.
+
+\bibitem[LeCun and Canziani(2021)]{lecun2021}
+Yann LeCun and Alfredo Canziani.
+\newblock {NYU} deep learning {SP21} -- {DS-GA} 1008.
+\newblock \url{https://atcold.github.io/NYU-DLSP21/}, 2021.
+\newblock Spring 2021, NYU Center for Data Science.
+
+\bibitem[LeCun et~al.(1998)LeCun, Bottou, Bengio, and Haffner]{lecun1998}
+Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+
+\bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{rumelhart1986}
+David~E. Rumelhart, Geoffrey~E. Hinton, and Ronald~J. Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock \emph{Nature}, 323:\penalty0 533--536, 1986.
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, volume~30, 2017.
+
+\end{thebibliography}

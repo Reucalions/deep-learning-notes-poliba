@@ -11,9 +11,20 @@ Warning--I didn't find a database entry for "ioffe2015batch"
 Warning--I didn't find a database entry for "hochreiter1997lstm"
 Warning--I didn't find a database entry for "cho2014gru"
 Warning--I didn't find a database entry for "bahdanau2015attention"
+Warning--I didn't find a database entry for "srivastava2014dropout"
+Warning--I didn't find a database entry for "ronneberger2015unet"
+Warning--I didn't find a database entry for "kingma2014vae"
+Warning--I didn't find a database entry for "lecun2006tutorial"
+Warning--I didn't find a database entry for "taigman2014deepface"
+Warning--I didn't find a database entry for "li2020rethinking"
+Warning--I didn't find a database entry for "kingma2013vae"
+Warning--I didn't find a database entry for "du2019implicit"
+Warning--I didn't find a database entry for "grill2020byol"
+Warning--I didn't find a database entry for "chen2021simsiam"
+Warning--I didn't find a database entry for "baevski2020wav2vec"
 You've used 7 entries,
             2773 wiz_defined-function locations,
-            646 strings with 6149 characters,
+            657 strings with 6327 characters,
 and the built_in function-call counts, 3405 in all, are:
 = -- 290
 > -- 235
@@ -52,4 +63,4 @@ warning$ -- 0
 while$ -- 27
 width$ -- 0
 write$ -- 103
-(There were 8 warnings)
+(There were 19 warnings)

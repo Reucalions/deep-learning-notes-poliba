@@ -636,27 +636,17 @@ modificare troppo le attività nascoste da un'iterazione all'altra.
   \caption{Guida alla scelta dell'ottimizzatore.}
   \label{tab:optim_guide}
   \small
-  \begin{tabular}{lll}
+  \begin{tabularx}{\linewidth}{X l X}
     \toprule
     \textbf{Scenario} & \textbf{Ottimizzatore} & \textbf{Note} \\
     \midrule
-    Dataset piccolo ($\leq$10k) / bassa ridondanza
-      & Full-batch (CG, L-BFGS, rprop)
-      & Convergenza precisa \\
-    Dataset grande e ridondante
-      & Mini-batch SGD + Momentum
-      & Default per CV \\
-    Gradient sparso / NLP / embedding
-      & Adam / AdamW
-      & Adattività per feature rare \\
-    Modelli grandi, generalizzazione critica
-      & AdamW o SGD + momentum
-      & AdamW corregge weight decay \\
-    Memoria limitata, batch grande
-      & Lion
-      & Un solo buffer di stato \\
+    Dataset piccolo ($\leq$10k) / bassa ridondanza & Full-batch (CG, L-BFGS, rprop) & Convergenza precisa \\
+    Dataset grande e ridondante                    & Mini-batch SGD + Momentum       & Default per CV \\
+    Gradient sparso / NLP / embedding              & Adam / AdamW                    & Adattività per feature rare \\
+    Modelli grandi, generalizzazione critica        & AdamW o SGD + momentum          & AdamW corregge weight decay \\
+    Memoria limitata, batch grande                 & Lion                            & Un solo buffer di stato \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Regole operative.}

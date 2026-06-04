@@ -446,22 +446,22 @@ simili devono stare vicini sulla sfera, quelli dissimili devono essere
   \caption{Guida alla scelta della funzione di perdita.}
   \label{tab:loss_guide}
   \small
-  \begin{tabular}{lll}
+  \begin{tabularx}{\linewidth}{l l X}
     \toprule
     \textbf{Task} & \textbf{Loss consigliata} & \textbf{Note} \\
     \midrule
-    Regressione standard      & \texttt{MSELoss}            & Sensibile agli outlier \\
-    Regressione robusta       & \texttt{SmoothL1Loss}       & Huber, usata in CV \\
-    Regressione con immagini  & \texttt{L1Loss}             & Predizioni più nitide \\
-    Classificazione multiclasse & \texttt{CrossEntropyLoss} & Input = logit grezzi \\
-    Classificazione binaria   & \texttt{BCEWithLogitsLoss}  & Numericamente stabile \\
-    Classi sbilanciate        & \texttt{NLLLoss} + weight   & O equalizzare frequenza \\
-    Classi $\gg 10^4$         & \texttt{AdaptiveLogSoftmax} & Approssimazione efficiente \\
-    Ranking / retrieval       & \texttt{MarginRankingLoss}  & Coppia positivo/negativo \\
-    Metric learning           & \texttt{TripletMarginLoss}  & Tripla anchor/pos/neg \\
-    Embedding similarity      & \texttt{CosineEmbeddingLoss}& Direzione vettoriale \\
+    Regressione standard        & \texttt{MSELoss}             & Sensibile agli outlier \\
+    Regressione robusta         & \texttt{SmoothL1Loss}        & Huber, usata in CV \\
+    Regressione con immagini    & \texttt{L1Loss}              & Predizioni più nitide \\
+    Classificazione multiclasse & \texttt{CrossEntropyLoss}    & Input = logit grezzi \\
+    Classificazione binaria     & \texttt{BCEWithLogitsLoss}   & Numericamente stabile \\
+    Classi sbilanciate          & \texttt{NLLLoss} + weight    & O equalizzare frequenza \\
+    Classi $\gg 10^4$           & \texttt{AdaptiveLogSoftmax}  & Approssimazione efficiente \\
+    Ranking / retrieval         & \texttt{MarginRankingLoss}   & Coppia positivo/negativo \\
+    Metric learning             & \texttt{TripletMarginLoss}   & Tripla anchor/pos/neg \\
+    Embedding similarity        & \texttt{CosineEmbeddingLoss} & Direzione vettoriale \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Regole operative.}

@@ -442,17 +442,19 @@ gate chiuso e input gate aperto).
   \caption{Confronto tra LSTM e GRU.}
   \label{tab:lstm-gru}
   \small
+  \adjustbox{max width=\linewidth}{%
   \begin{tabular}{lll}
     \toprule
     \textbf{Caratteristica} & \textbf{LSTM} & \textbf{GRU} \\
     \midrule
-    Numero di porte & 3 (forget, input, output) & 2 (reset, update) \\
-    Vettori di stato & 2 ($\mathbf{h}_t$, $\mathbf{c}_t$) & 1 ($\mathbf{h}_t$) \\
-    Parametri per cella & $4 \times (d_h^2 + d_h d_x + d_h)$ & $3 \times (d_h^2 + d_h d_x + d_h)$ \\
-    Vanishing gradient & Risolto (cell state lineare) & Risolto (interpolazione) \\
-    Prestazioni tipiche & Migliori su sequenze lunghissime & Comparabili, più veloci \\
+    Numero di porte      & 3 (forget, input, output)                 & 2 (reset, update) \\
+    Vettori di stato     & 2 ($\mathbf{h}_t$, $\mathbf{c}_t$)        & 1 ($\mathbf{h}_t$) \\
+    Parametri per cella  & $4 \times (d_h^2 + d_h d_x + d_h)$        & $3 \times (d_h^2 + d_h d_x + d_h)$ \\
+    Vanishing gradient   & Risolto (cell state lineare)               & Risolto (interpolazione) \\
+    Prestazioni tipiche  & Migliori su sequenze lunghissime           & Comparabili, più veloci \\
     \bottomrule
-  \end{tabular}
+  \end{tabular}%
+  }
 \end{table}
 
 %------------------------------------------------------------

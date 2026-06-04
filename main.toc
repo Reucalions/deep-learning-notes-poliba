@@ -1,450 +1,527 @@
 \babel@toc {italian}{}\relax 
 \contentsline {chapter}{Prefazione}{1}{chapter*.1}%
-\contentsline {chapter}{\numberline {1}Introduzione al Deep Learning}{13}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Machine Learning vs Deep Learning}{13}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Modello Parametrico e Funzione di Costo}{14}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Notazione con grafi a blocchi}{15}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Funzione di loss e loss media}{15}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Reti Neurali Tradizionali}{16}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Implementazione in PyTorch}{17}{subsection.1.3.1}%
-\contentsline {section}{\numberline {1.4}Grafi Computazionali e Backpropagation}{17}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Regola della catena -- caso scalare}{17}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Caso vettoriale e matrice Jacobiana}{18}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Backprop in un grafo multi-stadio}{19}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Riepilogo}{20}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Architetture di Base}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Moduli Moltiplicativi}{21}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Unità Sigma-Pi e layer quadratico}{21}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Modulo di attenzione}{22}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Proprietà di differenziabilità}{22}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Mixture of Experts}{23}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Trasformazioni dei Parametri}{24}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Weight sharing -- condivisione dei pesi}{25}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Shared weights per la rilevazione di motif}{25}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Riepilogo}{26}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Learning Representations}{27}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Limiti dei Classificatori Lineari}{27}{section.3.1}%
-\contentsline {section}{\numberline {3.2}La Soluzione: Rappresentazioni (Feature)}{28}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Idee per l'estrazione generica di feature}{29}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Feature monomiali e limiti}{29}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Reti Shallow vs Reti Profonde}{30}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Le reti shallow sono approssimatori universali}{30}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Perché servono architetture profonde?}{30}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Invariant Feature Learning}{31}{section.3.4}%
-\contentsline {section}{\numberline {3.5}L'Ipotesi del Manifold}{32}{section.3.5}%
-\contentsline {paragraph}{Esempio: immagini di volti.}{32}{section*.3}%
-\contentsline {section}{\numberline {3.6}Disentangling e Apprendimento delle Rappresentazioni}{33}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Architetture Multilayer = Struttura Compositiva}{33}{section.3.7}%
-\contentsline {paragraph}{Gerarchia di rappresentazioni nei diversi domini.}{34}{figure.3.13}%
-\contentsline {section}{\numberline {3.8}Riepilogo}{35}{section.3.8}%
-\contentsline {chapter}{\numberline {4}Activation Functions}{36}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Il Problema del Vanishing Gradient}{36}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Panoramica: Saturating vs Non-Saturating}{37}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Famiglia ReLU}{38}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}ReLU -- \texttt {nn.ReLU()}}{38}{subsection.4.3.1}%
-\contentsline {paragraph}{Proprietà chiave.}{38}{section*.5}%
-\contentsline {subsection}{\numberline {4.3.2}Leaky ReLU -- \texttt {nn.LeakyReLU()}}{38}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}PReLU -- \texttt {nn.PReLU()}}{39}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}RReLU -- \texttt {nn.RReLU()}}{40}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}ReLU6 -- \texttt {nn.ReLU6()}}{40}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Famiglia ELU}{41}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}ELU -- \texttt {nn.ELU()}}{41}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}CELU -- \texttt {nn.CELU()}}{42}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}SELU -- \texttt {nn.SELU()}}{42}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Softplus e GELU}{43}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Softplus -- \texttt {nn.Softplus()}}{43}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}GELU -- \texttt {nn.GELU()}}{43}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}Funzioni Saturanti}{44}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Sigmoid -- \texttt {nn.Sigmoid()}}{44}{subsection.4.6.1}%
-\contentsline {paragraph}{Connessione con Softmax.}{45}{section*.6}%
-\contentsline {subsection}{\numberline {4.6.2}Tanh -- \texttt {nn.Tanh()}}{45}{subsection.4.6.2}%
-\contentsline {paragraph}{Relazione con Sigmoid.}{46}{section*.7}%
-\contentsline {subsection}{\numberline {4.6.3}Hardtanh -- \texttt {nn.Hardtanh()}}{46}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Softsign -- \texttt {nn.Softsign()}}{47}{subsection.4.6.4}%
-\contentsline {section}{\numberline {4.7}Funzioni Shrink e Threshold}{48}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Threshold -- \texttt {nn.Threshold()}}{48}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Tanhshrink -- \texttt {nn.Tanhshrink()}}{48}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Softshrink -- \texttt {nn.Softshrink()}}{49}{subsection.4.7.3}%
-\contentsline {subsection}{\numberline {4.7.4}Hardshrink -- \texttt {nn.Hardshrink()}}{49}{subsection.4.7.4}%
-\contentsline {section}{\numberline {4.8}LogSigmoid -- \texttt {nn.LogSigmoid()}}{50}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Funzioni Vettoriali: Softmin, Softmax, LogSoftmax}{51}{section.4.9}%
-\contentsline {subsection}{\numberline {4.9.1}Softmin -- \texttt {nn.Softmin()}}{51}{subsection.4.9.1}%
-\contentsline {subsection}{\numberline {4.9.2}Soft(arg)max -- \texttt {nn.Softmax()}}{51}{subsection.4.9.2}%
-\contentsline {paragraph}{Softmax come generalizzazione di Sigmoid.}{52}{section*.8}%
-\contentsline {subsection}{\numberline {4.9.3}LogSoft(arg)max -- \texttt {nn.LogSoftmax()}}{52}{subsection.4.9.3}%
-\contentsline {section}{\numberline {4.10}Softmax e Cross-Entropy Loss}{53}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Guida Pratica alla Scelta}{54}{section.4.11}%
-\contentsline {paragraph}{Raccomandazioni operative.}{54}{section*.9}%
-\contentsline {section}{\numberline {4.12}Riepilogo}{55}{section.4.12}%
-\contentsline {chapter}{\numberline {5}Loss Functions}{56}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Loss per Regressione}{56}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}MSE Loss -- \texttt {nn.MSELoss()}}{56}{subsection.5.1.1}%
-\contentsline {paragraph}{Pro e contro.}{56}{section*.10}%
-\contentsline {subsection}{\numberline {5.1.2}L1 Loss -- \texttt {nn.L1Loss()}}{57}{subsection.5.1.2}%
-\contentsline {paragraph}{Vantaggio rispetto a L2.}{57}{section*.11}%
-\contentsline {paragraph}{Limite.}{57}{section*.12}%
-\contentsline {subsection}{\numberline {5.1.3}Smooth L1 Loss (Huber Loss) -- \texttt {nn.SmoothL1Loss()}}{57}{subsection.5.1.3}%
-\contentsline {paragraph}{Pro e contro.}{57}{section*.13}%
-\contentsline {subsection}{\numberline {5.1.4}L1 vs.\ L2 in Computer Vision}{57}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Loss per Classificazione}{58}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}NLL Loss -- \texttt {nn.NLLLoss()}}{58}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Gestione dei Dataset Sbilanciati}{58}{subsection.5.2.2}%
-\contentsline {paragraph}{Strategia 1 -- Pesi nella loss.}{58}{section*.14}%
-\contentsline {paragraph}{Strategia 2 -- Equalizzazione della frequenza (preferita).}{59}{section*.15}%
-\contentsline {subsection}{\numberline {5.2.3}Cross-Entropy Loss -- \texttt {nn.CrossEntropyLoss()}}{59}{subsection.5.2.3}%
-\contentsline {paragraph}{Perché unire LogSoftmax e NLLLoss?}{59}{section*.16}%
-\contentsline {paragraph}{Interpretazione probabilistica: KL Divergence.}{59}{section*.17}%
-\contentsline {subsection}{\numberline {5.2.4}Binary Cross Entropy -- \texttt {nn.BCELoss()}}{60}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}BCE with Logits -- \texttt {nn.BCEWithLogitsLoss()}}{60}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}NLL Loss Adattiva -- \texttt {nn.AdaptiveLogSoftmaxWithLoss()}}{60}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}KL Divergence Loss -- \texttt {nn.KLDivLoss()}}{60}{subsection.5.2.7}%
-\contentsline {section}{\numberline {5.3}Loss Basate su Margine}{60}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Hinge Embedding Loss -- \texttt {nn.HingeEmbeddingLoss()}}{61}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Margin Ranking Loss -- \texttt {nn.MarginRankingLoss()}}{61}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Triplet Margin Loss -- \texttt {nn.TripletMarginLoss()}}{61}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Soft Margin Loss -- \texttt {nn.SoftMarginLoss()}}{61}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Multi-Class Hinge Loss -- \texttt {nn.MultiLabelMarginLoss()}}{62}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Loss per Embedding: Cosine Embedding Loss}{62}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Formulazione}{62}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Interpretazione Geometrica}{62}{subsection.5.4.2}%
-\contentsline {paragraph}{Perché normalizzare?}{63}{section*.18}%
-\contentsline {paragraph}{Comportamento per le due casistiche:}{63}{section*.19}%
-\contentsline {section}{\numberline {5.5}Guida Pratica alla Scelta della Loss}{63}{section.5.5}%
-\contentsline {paragraph}{Regole operative.}{63}{section*.20}%
-\contentsline {section}{\numberline {5.6}Riepilogo}{64}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Ottimizzazione}{65}{chapter.6}%
-\contentsline {section}{\numberline {6.1}La Superficie di Errore}{65}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Neuroni Lineari e Ciotola Quadratica}{65}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Il Problema della Direzione del Gradiente}{66}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Algoritmi di Apprendimento: Batch, Mini-Batch, Online}{67}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Ridondanza nel Dataset}{67}{subsection.6.2.1}%
-\contentsline {paragraph}{Regola pratica.}{67}{section*.21}%
-\contentsline {section}{\numberline {6.3}Accorgimenti per il Mini-Batch Gradient Descent}{67}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Learning Rate e Quando Ridurlo}{67}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Inizializzazione dei Pesi}{68}{subsection.6.3.2}%
-\contentsline {paragraph}{Fan-in e overshooting.}{68}{section*.22}%
-\contentsline {subsubsection}{Inizializzazione di Xavier / Glorot}{68}{section*.23}%
-\contentsline {subsection}{\numberline {6.3.3}Pre-elaborazione degli Input}{69}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Il Metodo del Momentum}{69}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Intuizione Fisica}{69}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Equazioni del Momentum (SGD con Momentum)}{70}{subsection.6.4.2}%
-\contentsline {paragraph}{Effetto di $\beta $.}{70}{section*.24}%
-\contentsline {subsection}{\numberline {6.4.3}Momentum di Nesterov (NAG)}{70}{subsection.6.4.3}%
-\contentsline {paragraph}{Perché il momentum funziona?}{71}{section*.25}%
-\contentsline {section}{\numberline {6.5}Learning Rate Adattativi Separati}{71}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Motivazione}{71}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}Determinazione dei Guadagni Locali}{71}{subsection.6.5.2}%
-\contentsline {paragraph}{Combinare con il momentum.}{72}{section*.26}%
-\contentsline {section}{\numberline {6.6}rprop e rmsprop}{72}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}rprop: Solo il Segno del Gradiente}{72}{subsection.6.6.1}%
-\contentsline {paragraph}{Perché rprop non funziona con i mini-batch.}{72}{section*.27}%
-\contentsline {subsection}{\numberline {6.6.2}rmsprop: Versione Mini-Batch di rprop}{72}{subsection.6.6.2}%
-\contentsline {section}{\numberline {6.7}Metodi Adattativi Avanzati}{73}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Adagrad}{73}{subsection.6.7.1}%
-\contentsline {paragraph}{Vantaggi e limiti.}{73}{section*.28}%
-\contentsline {subsection}{\numberline {6.7.2}Adadelta}{73}{subsection.6.7.2}%
-\contentsline {paragraph}{Relazione con rmsprop.}{74}{section*.29}%
-\contentsline {subsection}{\numberline {6.7.3}Adam: Adaptive Moment Estimation}{74}{subsection.6.7.3}%
-\contentsline {paragraph}{Interpretazione.}{74}{section*.30}%
-\contentsline {subsubsection}{Limitazioni di Adam}{75}{section*.31}%
-\contentsline {subsection}{\numberline {6.7.4}AdamW: Adam con Weight Decay Corretto}{75}{subsection.6.7.4}%
-\contentsline {subsection}{\numberline {6.7.5}Lion: EvoLved Sign Momentum}{76}{subsection.6.7.5}%
-\contentsline {section}{\numberline {6.8}Metodi di Secondo Ordine}{76}{section.6.8}%
-\contentsline {subsection}{\numberline {6.8.1}Riduzione dell'Errore e Rapporto Gradiente/Curvatura}{76}{subsection.6.8.1}%
-\contentsline {subsection}{\numberline {6.8.2}Metodo di Newton}{76}{subsection.6.8.2}%
-\contentsline {paragraph}{Matrici di curvatura.}{77}{section*.32}%
-\contentsline {subsection}{\numberline {6.8.3}Hessian-Free Optimization e Gradiente Coniugato}{77}{subsection.6.8.3}%
-\contentsline {paragraph}{Gradiente Coniugato.}{77}{section*.33}%
-\contentsline {section}{\numberline {6.9}Riepilogo dei Metodi di Ottimizzazione}{77}{section.6.9}%
-\contentsline {paragraph}{Regole operative.}{77}{section*.34}%
-\contentsline {chapter}{\numberline {7}Normalization Layers}{79}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Covariate Shift e Internal Covariate Shift}{79}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Batch Normalization}{79}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Idea di Base}{79}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Perché l'Approccio Naïf Non Funziona}{80}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}La Soluzione: un Layer di Normalizzazione Differenziabile}{80}{subsection.7.2.3}%
-\contentsline {paragraph}{Algoritmo formale.}{80}{section*.35}%
-\contentsline {subsection}{\numberline {7.2.4}Parametri Apprendibili $\gamma $ e $\beta $}{81}{subsection.7.2.4}%
-\contentsline {section}{\numberline {7.3}Vantaggi della Batch Normalization}{81}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}Benefici Teorici (Motivazione Originale)}{81}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}Benefici Pratici}{82}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Posizionamento del Layer BN}{82}{section.7.4}%
-\contentsline {paragraph}{Fase di inferenza.}{83}{section*.36}%
-\contentsline {section}{\numberline {7.5}Varianti di Normalizzazione}{83}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Batch Normalization (BN)}{84}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Layer Normalization (LN)}{84}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Instance Normalization (IN)}{84}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Group Normalization (GN)}{84}{subsection.7.5.4}%
-\contentsline {section}{\numberline {7.6}Perché la Normalizzazione Funziona Davvero?}{85}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Riepilogo e Linee Guida Pratiche}{85}{section.7.7}%
-\contentsline {paragraph}{Regole operative.}{85}{section*.37}%
-\contentsline {chapter}{\numberline {8}Reti Neurali Convoluzionali}{87}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Limiti delle Reti Completamente Connesse sulle Immagini}{87}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Volumi 3D e Connettività Locale}{87}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Organizzazione tridimensionale}{87}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Connettività locale}{88}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Il Layer di Convoluzione}{88}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Operazione di convoluzione}{88}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Mappe di attivazione}{89}{subsection.8.3.2}%
-\contentsline {paragraph}{Esempio.}{90}{section*.38}%
-\contentsline {subsection}{\numberline {8.3.3}Dimensioni spaziali: stride e zero-padding}{90}{subsection.8.3.3}%
-\contentsline {paragraph}{Zero-padding per preservare la dimensione.}{90}{section*.39}%
-\contentsline {subsection}{\numberline {8.3.4}Convoluzione 1\texttimes 1}{91}{subsection.8.3.4}%
-\contentsline {section}{\numberline {8.4}Campi Recettivi}{91}{section.8.4}%
-\contentsline {paragraph}{Problema per immagini grandi.}{92}{section*.40}%
-\contentsline {section}{\numberline {8.5}Cosa Imparano i Filtri Convoluzionali?}{92}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Il Layer di Pooling}{92}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}Max Pooling}{92}{subsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.6.2}Altre varianti di pooling}{93}{subsection.8.6.2}%
-\contentsline {section}{\numberline {8.7}Il Layer Fully Connected}{93}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Architettura Tipica di una ConvNet}{93}{section.8.8}%
-\contentsline {paragraph}{Trend moderni.}{94}{section*.41}%
-\contentsline {subsection}{\numberline {8.8.1}Esempio di stack convoluzionale}{94}{subsection.8.8.1}%
-\contentsline {section}{\numberline {8.9}Proprietà Fondamentali delle ConvNet}{94}{section.8.9}%
-\contentsline {subsection}{\numberline {8.9.1}Parameter sharing}{94}{subsection.8.9.1}%
-\contentsline {subsection}{\numberline {8.9.2}Equivarianza traslazionale}{94}{subsection.8.9.2}%
-\contentsline {subsection}{\numberline {8.9.3}Connessioni sparse}{95}{subsection.8.9.3}%
-\contentsline {section}{\numberline {8.10}Riepilogo dei Componenti Principali}{95}{section.8.10}%
-\contentsline {paragraph}{Regole pratiche.}{95}{section*.42}%
-\contentsline {chapter}{\numberline {9}Reti Ricorrenti}{96}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Motivazione: Modellare Sequenze}{96}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Il Problema della Modellazione Sequenziale}{96}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}Rappresentazione Numerica del Linguaggio}{97}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Reti Neurali Ricorrenti (RNN)}{97}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Neuroni con Ricorrenza}{97}{subsection.9.2.1}%
-\contentsline {paragraph}{Implementazione in PyTorch.}{98}{lstlisting.9.1}%
-\contentsline {subsection}{\numberline {9.2.2}Grafo Computazionale nel Tempo}{98}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Architetture Sequenziali}{99}{subsection.9.2.3}%
-\contentsline {section}{\numberline {9.3}Backpropagation Through Time (BPTT)}{99}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Algoritmo}{99}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Il Problema dei Gradienti che Svaniscono o Esplodono}{100}{subsection.9.3.2}%
-\contentsline {paragraph}{Soluzioni pratiche.}{100}{section*.44}%
-\contentsline {paragraph}{Nota sul backward pass lineare.}{101}{section*.45}%
-\contentsline {section}{\numberline {9.4}Long Short-Term Memory (LSTM)}{101}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Motivazione: La Memoria Analogica}{101}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Architettura della Cella LSTM}{101}{subsection.9.4.2}%
-\contentsline {subsubsection}{Forget Gate (Cancellazione)}{102}{section*.46}%
-\contentsline {subsubsection}{Input Gate (Memorizzazione)}{103}{section*.47}%
-\contentsline {subsubsection}{Aggiornamento del Cell State}{103}{section*.48}%
-\contentsline {subsubsection}{Output Gate (Uscita)}{103}{section*.49}%
-\contentsline {subsection}{\numberline {9.4.3}Flusso del Gradiente nelle LSTM}{103}{subsection.9.4.3}%
-\contentsline {section}{\numberline {9.5}Gated Recurrent Unit (GRU)}{104}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Architettura}{104}{subsection.9.5.1}%
-\contentsline {paragraph}{Reset gate.}{104}{section*.50}%
-\contentsline {paragraph}{Update gate.}{104}{section*.51}%
-\contentsline {paragraph}{Candidato e aggiornamento.}{104}{section*.52}%
-\contentsline {subsection}{\numberline {9.5.2}Confronto LSTM vs GRU}{105}{subsection.9.5.2}%
-\contentsline {section}{\numberline {9.6}Bi-LSTM e Architetture Avanzate}{105}{section.9.6}%
-\contentsline {subsection}{\numberline {9.6.1}LSTM Bidirezionale}{105}{subsection.9.6.1}%
-\contentsline {subsection}{\numberline {9.6.2}Encoder--Decoder per la Traduzione Automatica}{105}{subsection.9.6.2}%
-\contentsline {section}{\numberline {9.7}Applicazioni delle RNN}{106}{section.9.7}%
-\contentsline {section}{\numberline {9.8}Riepilogo e Linee Guida Pratiche}{106}{section.9.8}%
-\contentsline {paragraph}{Consigli operativi.}{106}{section*.53}%
-\contentsline {chapter}{\numberline {10}Migliorare la Generalizzazione}{107}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Il Problema dell'Overfitting}{107}{section.10.1}%
-\contentsline {paragraph}{Tre approcci principali per prevenirlo.}{107}{section*.54}%
-\contentsline {section}{\numberline {10.2}Metodi per Limitare la Capacità}{108}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Early Stopping}{108}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Intuizione: Capacità come Funzione dei Pesi}{108}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Procedura Pratica}{109}{subsection.10.3.2}%
-\contentsline {paragraph}{Nota.}{109}{section*.55}%
-\contentsline {section}{\numberline {10.4}Weight Decay (Regolarizzazione L2 e L1)}{109}{section.10.4}%
-\contentsline {subsection}{\numberline {10.4.1}Penalità L2}{109}{subsection.10.4.1}%
-\contentsline {subsection}{\numberline {10.4.2}Penalità L1}{109}{subsection.10.4.2}%
-\contentsline {section}{\numberline {10.5}Rumore come Regolarizzatore}{110}{section.10.5}%
-\contentsline {subsection}{\numberline {10.5.1}Rumore Gaussiano sugli Input e L2 Implicita}{110}{subsection.10.5.1}%
-\contentsline {subsection}{\numberline {10.5.2}Forme di Rumore più Avanzate}{111}{subsection.10.5.2}%
-\contentsline {section}{\numberline {10.6}Combinare Modelli: Media degli Ensemble}{111}{section.10.6}%
-\contentsline {subsection}{\numberline {10.6.1}Bias-Variance Trade-off}{111}{subsection.10.6.1}%
-\contentsline {subsection}{\numberline {10.6.2}Due Modi di Combinare i Modelli}{111}{subsection.10.6.2}%
-\contentsline {paragraph}{Mixture (media aritmetica).}{111}{section*.56}%
-\contentsline {paragraph}{Product (media geometrica).}{112}{section*.57}%
-\contentsline {subsection}{\numberline {10.6.3}Come Rendere i Modelli Diversi}{112}{subsection.10.6.3}%
-\contentsline {section}{\numberline {10.7}Dropout}{113}{section.10.7}%
-\contentsline {subsection}{\numberline {10.7.1}Definizione e Meccanismo}{113}{subsection.10.7.1}%
-\contentsline {subsection}{\numberline {10.7.2}Dropout come Model Averaging}{113}{subsection.10.7.2}%
-\contentsline {subsection}{\numberline {10.7.3}Inferenza a Tempo di Test: Weight Scaling}{113}{subsection.10.7.3}%
-\contentsline {paragraph}{Dropout multi-layer.}{114}{section*.58}%
-\contentsline {paragraph}{Dropout bayesiano (MC-Dropout).}{114}{section*.59}%
-\contentsline {subsection}{\numberline {10.7.4}Interpretazione della Co-Adattamento}{114}{subsection.10.7.4}%
-\contentsline {section}{\numberline {10.8}Riepilogo e Linee Guida Pratiche}{115}{section.10.8}%
-\contentsline {paragraph}{Regole operative.}{115}{section*.60}%
-\contentsline {chapter}{\numberline {11}Autoencoder}{116}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Autoencoder Classico}{116}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Struttura e Formulazione}{116}{subsection.11.1.1}%
-\contentsline {subsection}{\numberline {11.1.2}Sparse Autoencoder}{117}{subsection.11.1.2}%
-\contentsline {section}{\numberline {11.2}Deep Autoencoder}{117}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Stacking di Autoencoder}{117}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Confronto con la PCA}{118}{subsection.11.2.2}%
-\contentsline {section}{\numberline {11.3}U-Net}{119}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}Segmentazione Semantica}{119}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Architettura U-Net}{119}{subsection.11.3.2}%
-\contentsline {subsection}{\numberline {11.3.3}Skip Connections}{120}{subsection.11.3.3}%
-\contentsline {subsection}{\numberline {11.3.4}Deconvoluzione e Upsampling}{120}{subsection.11.3.4}%
-\contentsline {paragraph}{Layer di output.}{121}{section*.61}%
-\contentsline {section}{\numberline {11.4}Variational Autoencoder (VAE)}{121}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Limitazioni dell'Autoencoder Classico}{121}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}Confronto AE vs VAE: Flusso Computazionale}{121}{subsection.11.4.2}%
-\contentsline {subsection}{\numberline {11.4.3}Modello Probabilistico}{122}{subsection.11.4.3}%
-\contentsline {paragraph}{Il teorema di Bayes nel VAE.}{122}{section*.62}%
-\contentsline {subsection}{\numberline {11.4.4}Inferenza Variazionale}{122}{subsection.11.4.4}%
-\contentsline {subsection}{\numberline {11.4.5}Funzione di Loss del VAE}{123}{subsection.11.4.5}%
-\contentsline {subsection}{\numberline {11.4.6}Proprietà dello Spazio Latente Regolarizzato}{123}{subsection.11.4.6}%
-\contentsline {subsection}{\numberline {11.4.7}Il Reparametrization Trick}{124}{subsection.11.4.7}%
-\contentsline {subsection}{\numberline {11.4.8}Schema Completo del VAE}{125}{subsection.11.4.8}%
-\contentsline {paragraph}{Implementazione in PyTorch.}{125}{lstlisting.11.3}%
-\contentsline {section}{\numberline {11.5}Confronto e Riepilogo}{126}{section.11.5}%
-\contentsline {paragraph}{Linee guida pratiche.}{127}{section*.64}%
-\contentsline {chapter}{\numberline {12}Generative Adversarial Networks}{128}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Preliminari: Variabili Aleatorie e Modelli Generativi}{128}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Generazione di Variabili Aleatorie}{128}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Modelli Generativi}{129}{subsection.12.1.2}%
-\contentsline {subsubsection}{Addestramento Diretto}{129}{section*.65}%
-\contentsline {section}{\numberline {12.2}Generative Adversarial Networks}{130}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}L'Idea Fondamentale: Confronto Indiretto}{130}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}Architettura GAN}{131}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}Architettura Pratica}{132}{subsection.12.2.3}%
-\contentsline {section}{\numberline {12.3}Formulazione Matematica}{132}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Loss del Discriminatore}{132}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Loss del Generatore}{132}{subsection.12.3.2}%
-\contentsline {subsection}{\numberline {12.3.3}Obiettivo Minimax Complessivo}{133}{subsection.12.3.3}%
-\contentsline {subsection}{\numberline {12.3.4}Interpretazione Game-Theoretic}{133}{subsection.12.3.4}%
-\contentsline {section}{\numberline {12.4}Dinamica dell'Addestramento}{134}{section.12.4}%
-\contentsline {subsection}{\numberline {12.4.1}Il Caso Ideale: Discriminatore Oracolo}{134}{subsection.12.4.1}%
-\contentsline {subsection}{\numberline {12.4.2}L'Approssimazione Pratica: Reti Neurali}{134}{subsection.12.4.2}%
-\contentsline {subsection}{\numberline {12.4.3}Procedura di Addestramento}{135}{subsection.12.4.3}%
-\contentsline {section}{\numberline {12.5}Problematiche nell'Addestramento delle GAN}{135}{section.12.5}%
-\contentsline {subsection}{\numberline {12.5.1}Mode Collapse}{135}{subsection.12.5.1}%
-\contentsline {subsection}{\numberline {12.5.2}Instabilità dell'Addestramento}{136}{subsection.12.5.2}%
-\contentsline {subsection}{\numberline {12.5.3}Soluzioni Proposte}{136}{subsection.12.5.3}%
-\contentsline {section}{\numberline {12.6}Implementazione in PyTorch}{136}{section.12.6}%
-\contentsline {section}{\numberline {12.7}Confronto tra Modelli Generativi}{138}{section.12.7}%
-\contentsline {paragraph}{Considerazioni pratiche.}{138}{section*.66}%
-\contentsline {chapter}{\numberline {13}Transformers}{139}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Architettura ad Alto Livello}{139}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}Stack Encoder--Decoder}{139}{subsection.13.1.1}%
-\contentsline {subsection}{\numberline {13.1.2}Struttura Interna dell'Encoder}{140}{subsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.1.3}Struttura del Decoder}{140}{subsection.13.1.3}%
-\contentsline {subsection}{\numberline {13.1.4}Flusso dei Tensori}{141}{subsection.13.1.4}%
-\contentsline {section}{\numberline {13.2}Self-Attention}{142}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}Query, Key, Value}{142}{subsection.13.2.1}%
-\contentsline {subsection}{\numberline {13.2.2}Calcolo Matriciale}{142}{subsection.13.2.2}%
-\contentsline {section}{\numberline {13.3}Multi-Head Attention}{143}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Positional Encoding}{144}{section.13.4}%
-\contentsline {section}{\numberline {13.5}Residual Connections e Layer Normalization}{145}{section.13.5}%
-\contentsline {section}{\numberline {13.6}Lato Decoder}{146}{section.13.6}%
-\contentsline {subsection}{\numberline {13.6.1}Encoder-Decoder Attention e Generazione}{146}{subsection.13.6.1}%
-\contentsline {subsection}{\numberline {13.6.2}Strato Lineare e Softmax Finale}{147}{subsection.13.6.2}%
-\contentsline {section}{\numberline {13.7}Addestramento del Transformer}{147}{section.13.7}%
-\contentsline {section}{\numberline {13.8}BERT}{147}{section.13.8}%
-\contentsline {subsection}{\numberline {13.8.1}Architettura}{147}{subsection.13.8.1}%
-\contentsline {subsection}{\numberline {13.8.2}Pre-training}{148}{subsection.13.8.2}%
-\contentsline {subsection}{\numberline {13.8.3}Utilizzo}{149}{subsection.13.8.3}%
-\contentsline {section}{\numberline {13.9}GPT}{149}{section.13.9}%
-\contentsline {subsection}{\numberline {13.9.1}Architettura Decoder-Only}{149}{subsection.13.9.1}%
-\contentsline {subsection}{\numberline {13.9.2}Masked Self-Attention: Dettaglio Numerico}{149}{subsection.13.9.2}%
-\contentsline {subsection}{\numberline {13.9.3}Decoder Block e Generazione}{150}{subsection.13.9.3}%
-\contentsline {subsection}{\numberline {13.9.4}Pipeline Self-Attention in GPT-2 Small}{151}{subsection.13.9.4}%
-\contentsline {subsection}{\numberline {13.9.5}Matrici di Peso in GPT-2 Small}{152}{subsection.13.9.5}%
-\contentsline {section}{\numberline {13.10}BERT vs.\ GPT: Confronto}{153}{section.13.10}%
-\contentsline {section}{\numberline {13.11}Riepilogo delle Componenti}{153}{section.13.11}%
-\contentsline {chapter}{\numberline {14}Diffusion Models}{154}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Stable Diffusion: Architettura Generale}{154}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Componenti Principali}{154}{subsection.14.1.1}%
-\contentsline {section}{\numberline {14.2}Il Processo di Diffusione}{155}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Forward Diffusion: Corruzione con Rumore}{155}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Addestramento del Predittore del Rumore}{156}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Reverse Diffusion: Rimozione Iterativa del Rumore}{156}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Noise Schedule}{157}{subsection.14.2.4}%
-\contentsline {section}{\numberline {14.3}Latent Diffusion: Diffusione nello Spazio Compresso}{157}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Motivazione: Limiti della Diffusione nello Spazio dei Pixel}{157}{subsection.14.3.1}%
-\contentsline {subsection}{\numberline {14.3.2}Spazio Latente e Variational Autoencoder}{158}{subsection.14.3.2}%
-\contentsline {subsection}{\numberline {14.3.3}Addestramento e Inferenza Latente}{158}{subsection.14.3.3}%
-\contentsline {paragraph}{Nota sulla risoluzione.}{159}{section*.67}%
-\contentsline {section}{\numberline {14.4}Condizionamento Testuale}{159}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}Dalla Diffusione Non Condizionata al Condizionamento}{159}{subsection.14.4.1}%
-\contentsline {subsection}{\numberline {14.4.2}Text Encoder: CLIP}{159}{subsection.14.4.2}%
-\contentsline {paragraph}{Importanza della scelta del language model.}{160}{section*.68}%
-\contentsline {subsection}{\numberline {14.4.3}Cross-Attention: Integrazione del Testo nella UNet}{160}{subsection.14.4.3}%
-\contentsline {paragraph}{Esempio: self-attention e cross-attention nel prompt.}{161}{section*.69}%
-\contentsline {section}{\numberline {14.5}Classifier-Free Guidance (CFG)}{162}{section.14.5}%
-\contentsline {subsection}{\numberline {14.5.1}Classifier Guidance}{162}{subsection.14.5.1}%
-\contentsline {subsection}{\numberline {14.5.2}Classifier-Free Guidance}{162}{subsection.14.5.2}%
-\contentsline {section}{\numberline {14.6}Modalità di Generazione Avanzate}{162}{section.14.6}%
-\contentsline {subsection}{\numberline {14.6.1}Image-to-Image}{162}{subsection.14.6.1}%
-\contentsline {subsection}{\numberline {14.6.2}Inpainting}{163}{subsection.14.6.2}%
-\contentsline {subsection}{\numberline {14.6.3}Depth-to-Image}{163}{subsection.14.6.3}%
-\contentsline {subsection}{\numberline {14.6.4}Altri Condizionamenti: ControlNet}{163}{subsection.14.6.4}%
-\contentsline {section}{\numberline {14.7}Stable Diffusion v1 vs.\ v2}{163}{section.14.7}%
-\contentsline {subsection}{\numberline {14.7.1}Differenze nel Modello}{163}{subsection.14.7.1}%
-\contentsline {subsection}{\numberline {14.7.2}Differenze nei Dati di Addestramento}{163}{subsection.14.7.2}%
-\contentsline {paragraph}{Stable Diffusion v1.4}{163}{section*.70}%
-\contentsline {paragraph}{Stable Diffusion v2.0}{164}{section*.71}%
-\contentsline {paragraph}{Stable Diffusion v2.1}{164}{section*.72}%
-\contentsline {subsection}{\numberline {14.7.3}Differenze nelle Prestazioni}{164}{subsection.14.7.3}%
-\contentsline {section}{\numberline {14.8}Confronto con le GAN e con altri Modelli Generativi}{164}{section.14.8}%
-\contentsline {paragraph}{Considerazioni pratiche.}{165}{section*.73}%
-\contentsline {chapter}{\numberline {15}Graph Neural Networks}{166}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Grafi come Strutture Dati}{166}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Definizione e Attributi}{166}{subsection.15.1.1}%
-\contentsline {subsection}{\numberline {15.1.2}Grafi in Natura: Esempi di Dominio}{167}{subsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.1.3}Task su Grafi}{168}{subsection.15.1.3}%
-\contentsline {subsection}{\numberline {15.1.4}Dataset di Grafi Reali}{169}{subsection.15.1.4}%
-\contentsline {section}{\numberline {15.2}Le Sfide del Calcolo su Grafi}{169}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}Struttura Non Uniforme}{169}{subsection.15.2.1}%
-\contentsline {subsection}{\numberline {15.2.2}Node-Order Equivariance}{169}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}Scalabilità}{169}{subsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.2.4}Rappresentazione con Liste di Adiacenza}{170}{subsection.15.2.4}%
-\contentsline {section}{\numberline {15.3}Graph Neural Networks}{170}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}Definizione e Framework}{170}{subsection.15.3.1}%
-\contentsline {subsection}{\numberline {15.3.2}La GNN più Semplice}{170}{subsection.15.3.2}%
-\contentsline {subsection}{\numberline {15.3.3}Predizioni tramite Pooling}{171}{subsection.15.3.3}%
-\contentsline {subsection}{\numberline {15.3.4}Message Passing}{171}{subsection.15.3.4}%
-\contentsline {subsection}{\numberline {15.3.5}Apprendimento di Rappresentazioni degli Archi}{172}{subsection.15.3.5}%
-\contentsline {subsection}{\numberline {15.3.6}Rappresentazioni Globali}{172}{subsection.15.3.6}%
-\contentsline {subsection}{\numberline {15.3.7}Funzioni di Condizionamento}{173}{subsection.15.3.7}%
-\contentsline {section}{\numberline {15.4}GNN in a Nutshell: Formalizzazione}{173}{section.15.4}%
-\contentsline {paragraph}{Node Aggregation.}{174}{section*.74}%
-\contentsline {paragraph}{Node Update.}{174}{section*.75}%
-\contentsline {paragraph}{Graph-level Readout.}{174}{section*.76}%
-\contentsline {section}{\numberline {15.5}Filtri Polinomiali e Graph Laplacian}{174}{section.15.5}%
-\contentsline {subsection}{\numberline {15.5.1}Il Graph Laplacian}{174}{subsection.15.5.1}%
-\contentsline {subsection}{\numberline {15.5.2}Filtri Polinomiali}{175}{subsection.15.5.2}%
-\contentsline {subsection}{\numberline {15.5.3}ChebNet}{175}{subsection.15.5.3}%
-\contentsline {paragraph}{Embedding computation.}{176}{section*.77}%
-\contentsline {section}{\numberline {15.6}Architetture GNN Moderne}{176}{section.15.6}%
-\contentsline {subsection}{\numberline {15.6.1}Graph Convolutional Networks (GCN)}{176}{subsection.15.6.1}%
-\contentsline {paragraph}{Vantaggi GCN.}{176}{section*.78}%
-\contentsline {paragraph}{GCN in a nutshell.}{177}{section*.79}%
-\contentsline {subsection}{\numberline {15.6.2}Graph Attention Networks (GAT)}{177}{subsection.15.6.2}%
-\contentsline {subsection}{\numberline {15.6.3}GraphSAGE}{177}{subsection.15.6.3}%
-\contentsline {subsection}{\numberline {15.6.4}Graph Isomorphism Network (GIN)}{178}{subsection.15.6.4}%
-\contentsline {section}{\numberline {15.7}Confronto tra Architetture GNN}{178}{section.15.7}%
-\contentsline {paragraph}{Considerazioni pratiche.}{178}{section*.80}%
-\contentsline {chapter}{\numberline {16}Energy-Based Models}{180}{chapter.16}%
-\contentsline {section}{\numberline {16.1}Definizione e Intuizione}{180}{section.16.1}%
-\contentsline {subsection}{\numberline {16.1.1}Confronto con i Modelli Feed-Forward}{181}{subsection.16.1.1}%
-\contentsline {subsection}{\numberline {16.1.2}Superfici Energetiche: Buon e Cattivo Addestramento}{182}{subsection.16.1.2}%
-\contentsline {section}{\numberline {16.2}Architetture EBM per la Predizione Multimodale}{183}{section.16.2}%
-\contentsline {subsection}{\numberline {16.2.1}Joint Embedding}{183}{subsection.16.2.1}%
-\contentsline {subsection}{\numberline {16.2.2}Modelli a Variabili Latenti}{184}{subsection.16.2.2}%
-\contentsline {paragraph}{Esempi applicativi.}{184}{section*.81}%
-\contentsline {subsection}{\numberline {16.2.3}LV-EBM Condizionale con Regolarizzazione}{184}{subsection.16.2.3}%
-\contentsline {section}{\numberline {16.3}Addestramento degli EBM}{184}{section.16.3}%
-\contentsline {subsection}{\numberline {16.3.1}Metodi Contrastivi}{185}{subsection.16.3.1}%
-\contentsline {paragraph}{Interpretazione probabilistica.}{186}{section*.82}%
-\contentsline {paragraph}{Massima verosimiglianza.}{186}{section*.83}%
-\contentsline {paragraph}{Problema con la massima verosimiglianza.}{186}{section*.84}%
-\contentsline {subsection}{\numberline {16.3.2}Addestramento con MCMC}{187}{subsection.16.3.2}%
-\contentsline {subsection}{\numberline {16.3.3}Metodi Regolarizzati e Architetturali}{187}{subsection.16.3.3}%
-\contentsline {section}{\numberline {16.4}Funzioni di Perdita per EBM}{187}{section.16.4}%
-\contentsline {section}{\numberline {16.5}Joint Embedding Contrastivo}{188}{section.16.5}%
-\contentsline {subsection}{\numberline {16.5.1}Joint Embedding Non Contrastivo}{189}{subsection.16.5.1}%
-\contentsline {section}{\numberline {16.6}Self-Supervised Learning}{189}{section.16.6}%
-\contentsline {subsection}{\numberline {16.6.1}SSL come Riempimento dei Vuoti}{190}{subsection.16.6.1}%
-\contentsline {paragraph}{Wav2Vec 2.0.}{190}{section*.85}%
-\contentsline {paragraph}{Modelli linguistici moderni.}{190}{section*.86}%
-\contentsline {section}{\numberline {16.7}Connessioni con i Modelli Generativi}{190}{section.16.7}%
-\contentsline {subsection}{\numberline {16.7.1}Relazione con i VAE}{190}{subsection.16.7.1}%
-\contentsline {subsection}{\numberline {16.7.2}Confronto con i Metodi Contrastivi e i VAE}{191}{subsection.16.7.2}%
-\contentsline {section}{\numberline {16.8}Architettura Pratica: ConvNet come EBM}{191}{section.16.8}%
+\contentsline {chapter}{\numberline {1}Introduzione al Deep Learning}{14}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Machine Learning vs Deep Learning}{14}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Modello Parametrico e Funzione di Costo}{15}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Notazione con grafi a blocchi}{16}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Funzione di loss e loss media}{16}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Reti Neurali Tradizionali}{17}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Implementazione in PyTorch}{18}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Grafi Computazionali e Backpropagation}{18}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Regola della catena -- caso scalare}{18}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Caso vettoriale e matrice Jacobiana}{19}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Backprop in un grafo multi-stadio}{20}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Riepilogo}{21}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Architetture di Base}{22}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Moduli Moltiplicativi}{22}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Unità Sigma-Pi e layer quadratico}{22}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Modulo di attenzione}{23}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Proprietà di differenziabilità}{23}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Mixture of Experts}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Trasformazioni dei Parametri}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Weight sharing -- condivisione dei pesi}{26}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Shared weights per la rilevazione di motif}{26}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Riepilogo}{27}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Learning Representations}{28}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Limiti dei Classificatori Lineari}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.2}La Soluzione: Rappresentazioni (Feature)}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Idee per l'estrazione generica di feature}{30}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Feature monomiali e limiti}{30}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Reti Shallow vs Reti Profonde}{31}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Le reti shallow sono approssimatori universali}{31}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Perché servono architetture profonde?}{31}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Invariant Feature Learning}{32}{section.3.4}%
+\contentsline {section}{\numberline {3.5}L'Ipotesi del Manifold}{33}{section.3.5}%
+\contentsline {paragraph}{Esempio: immagini di volti.}{33}{section*.3}%
+\contentsline {section}{\numberline {3.6}Disentangling e Apprendimento delle Rappresentazioni}{34}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Architetture Multilayer = Struttura Compositiva}{34}{section.3.7}%
+\contentsline {paragraph}{Gerarchia di rappresentazioni nei diversi domini.}{35}{figure.3.13}%
+\contentsline {section}{\numberline {3.8}Riepilogo}{36}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Activation Functions}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Il Problema del Vanishing Gradient}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Panoramica: Saturating vs Non-Saturating}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Famiglia ReLU}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}ReLU -- \texttt {nn.ReLU()}}{39}{subsection.4.3.1}%
+\contentsline {paragraph}{Proprietà chiave.}{39}{section*.5}%
+\contentsline {subsection}{\numberline {4.3.2}Leaky ReLU -- \texttt {nn.LeakyReLU()}}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}PReLU -- \texttt {nn.PReLU()}}{40}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}RReLU -- \texttt {nn.RReLU()}}{41}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}ReLU6 -- \texttt {nn.ReLU6()}}{41}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Famiglia ELU}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}ELU -- \texttt {nn.ELU()}}{42}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}CELU -- \texttt {nn.CELU()}}{43}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}SELU -- \texttt {nn.SELU()}}{43}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Softplus e GELU}{44}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Softplus -- \texttt {nn.Softplus()}}{44}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}GELU -- \texttt {nn.GELU()}}{44}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Funzioni Saturanti}{45}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Sigmoid -- \texttt {nn.Sigmoid()}}{45}{subsection.4.6.1}%
+\contentsline {paragraph}{Connessione con Softmax.}{46}{section*.6}%
+\contentsline {subsection}{\numberline {4.6.2}Tanh -- \texttt {nn.Tanh()}}{46}{subsection.4.6.2}%
+\contentsline {paragraph}{Relazione con Sigmoid.}{47}{section*.7}%
+\contentsline {subsection}{\numberline {4.6.3}Hardtanh -- \texttt {nn.Hardtanh()}}{47}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Softsign -- \texttt {nn.Softsign()}}{48}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Funzioni Shrink e Threshold}{49}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Threshold -- \texttt {nn.Threshold()}}{49}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Tanhshrink -- \texttt {nn.Tanhshrink()}}{49}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Softshrink -- \texttt {nn.Softshrink()}}{50}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}Hardshrink -- \texttt {nn.Hardshrink()}}{50}{subsection.4.7.4}%
+\contentsline {section}{\numberline {4.8}LogSigmoid -- \texttt {nn.LogSigmoid()}}{51}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Funzioni Vettoriali: Softmin, Softmax, LogSoftmax}{52}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Softmin -- \texttt {nn.Softmin()}}{52}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Soft(arg)max -- \texttt {nn.Softmax()}}{52}{subsection.4.9.2}%
+\contentsline {paragraph}{Softmax come generalizzazione di Sigmoid.}{53}{section*.8}%
+\contentsline {subsection}{\numberline {4.9.3}LogSoft(arg)max -- \texttt {nn.LogSoftmax()}}{53}{subsection.4.9.3}%
+\contentsline {section}{\numberline {4.10}Softmax e Cross-Entropy Loss}{54}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Guida Pratica alla Scelta}{55}{section.4.11}%
+\contentsline {paragraph}{Raccomandazioni operative.}{55}{section*.9}%
+\contentsline {section}{\numberline {4.12}Riepilogo}{56}{section.4.12}%
+\contentsline {chapter}{\numberline {5}Loss Functions}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Loss per Regressione}{57}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}MSE Loss -- \texttt {nn.MSELoss()}}{57}{subsection.5.1.1}%
+\contentsline {paragraph}{Pro e contro.}{57}{section*.10}%
+\contentsline {subsection}{\numberline {5.1.2}L1 Loss -- \texttt {nn.L1Loss()}}{58}{subsection.5.1.2}%
+\contentsline {paragraph}{Vantaggio rispetto a L2.}{58}{section*.11}%
+\contentsline {paragraph}{Limite.}{58}{section*.12}%
+\contentsline {subsection}{\numberline {5.1.3}Smooth L1 Loss (Huber Loss) -- \texttt {nn.SmoothL1Loss()}}{58}{subsection.5.1.3}%
+\contentsline {paragraph}{Pro e contro.}{58}{section*.13}%
+\contentsline {subsection}{\numberline {5.1.4}L1 vs.\ L2 in Computer Vision}{58}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Loss per Classificazione}{59}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}NLL Loss -- \texttt {nn.NLLLoss()}}{59}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gestione dei Dataset Sbilanciati}{59}{subsection.5.2.2}%
+\contentsline {paragraph}{Strategia 1 -- Pesi nella loss.}{59}{section*.14}%
+\contentsline {paragraph}{Strategia 2 -- Equalizzazione della frequenza (preferita).}{60}{section*.15}%
+\contentsline {subsection}{\numberline {5.2.3}Cross-Entropy Loss -- \texttt {nn.CrossEntropyLoss()}}{60}{subsection.5.2.3}%
+\contentsline {paragraph}{Perché unire LogSoftmax e NLLLoss?}{60}{section*.16}%
+\contentsline {paragraph}{Interpretazione probabilistica: KL Divergence.}{60}{section*.17}%
+\contentsline {subsection}{\numberline {5.2.4}Binary Cross Entropy -- \texttt {nn.BCELoss()}}{61}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}BCE with Logits -- \texttt {nn.BCEWithLogitsLoss()}}{61}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}NLL Loss Adattiva -- \texttt {nn.AdaptiveLogSoftmaxWithLoss()}}{61}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}KL Divergence Loss -- \texttt {nn.KLDivLoss()}}{61}{subsection.5.2.7}%
+\contentsline {section}{\numberline {5.3}Loss Basate su Margine}{61}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Hinge Embedding Loss -- \texttt {nn.HingeEmbeddingLoss()}}{62}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Margin Ranking Loss -- \texttt {nn.MarginRankingLoss()}}{62}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Triplet Margin Loss -- \texttt {nn.TripletMarginLoss()}}{62}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Soft Margin Loss -- \texttt {nn.SoftMarginLoss()}}{62}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Multi-Class Hinge Loss -- \texttt {nn.MultiLabelMarginLoss()}}{63}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Loss per Embedding: Cosine Embedding Loss}{63}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Formulazione}{63}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Interpretazione Geometrica}{63}{subsection.5.4.2}%
+\contentsline {paragraph}{Perché normalizzare?}{64}{section*.18}%
+\contentsline {paragraph}{Comportamento per le due casistiche:}{64}{section*.19}%
+\contentsline {section}{\numberline {5.5}Guida Pratica alla Scelta della Loss}{64}{section.5.5}%
+\contentsline {paragraph}{Regole operative.}{64}{section*.20}%
+\contentsline {section}{\numberline {5.6}Riepilogo}{65}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Ottimizzazione}{66}{chapter.6}%
+\contentsline {section}{\numberline {6.1}La Superficie di Errore}{66}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Neuroni Lineari e Ciotola Quadratica}{66}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Il Problema della Direzione del Gradiente}{67}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Algoritmi di Apprendimento: Batch, Mini-Batch, Online}{68}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Ridondanza nel Dataset}{68}{subsection.6.2.1}%
+\contentsline {paragraph}{Regola pratica.}{68}{section*.21}%
+\contentsline {section}{\numberline {6.3}Accorgimenti per il Mini-Batch Gradient Descent}{68}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Learning Rate e Quando Ridurlo}{68}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Inizializzazione dei Pesi}{69}{subsection.6.3.2}%
+\contentsline {paragraph}{Fan-in e overshooting.}{69}{section*.22}%
+\contentsline {subsubsection}{Inizializzazione di Xavier / Glorot}{69}{section*.23}%
+\contentsline {subsection}{\numberline {6.3.3}Pre-elaborazione degli Input}{70}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Il Metodo del Momentum}{70}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Intuizione Fisica}{70}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Equazioni del Momentum (SGD con Momentum)}{71}{subsection.6.4.2}%
+\contentsline {paragraph}{Effetto di $\beta $.}{71}{section*.24}%
+\contentsline {subsection}{\numberline {6.4.3}Momentum di Nesterov (NAG)}{71}{subsection.6.4.3}%
+\contentsline {paragraph}{Perché il momentum funziona?}{72}{section*.25}%
+\contentsline {section}{\numberline {6.5}Learning Rate Adattativi Separati}{72}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Motivazione}{72}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Determinazione dei Guadagni Locali}{72}{subsection.6.5.2}%
+\contentsline {paragraph}{Combinare con il momentum.}{73}{section*.26}%
+\contentsline {section}{\numberline {6.6}rprop e rmsprop}{73}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}rprop: Solo il Segno del Gradiente}{73}{subsection.6.6.1}%
+\contentsline {paragraph}{Perché rprop non funziona con i mini-batch.}{73}{section*.27}%
+\contentsline {subsection}{\numberline {6.6.2}rmsprop: Versione Mini-Batch di rprop}{73}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Metodi Adattativi Avanzati}{74}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Adagrad}{74}{subsection.6.7.1}%
+\contentsline {paragraph}{Vantaggi e limiti.}{74}{section*.28}%
+\contentsline {subsection}{\numberline {6.7.2}Adadelta}{74}{subsection.6.7.2}%
+\contentsline {paragraph}{Relazione con rmsprop.}{75}{section*.29}%
+\contentsline {subsection}{\numberline {6.7.3}Adam: Adaptive Moment Estimation}{75}{subsection.6.7.3}%
+\contentsline {paragraph}{Interpretazione.}{75}{section*.30}%
+\contentsline {subsubsection}{Limitazioni di Adam}{76}{section*.31}%
+\contentsline {subsection}{\numberline {6.7.4}AdamW: Adam con Weight Decay Corretto}{76}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}Lion: EvoLved Sign Momentum}{77}{subsection.6.7.5}%
+\contentsline {section}{\numberline {6.8}Metodi di Secondo Ordine}{77}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Riduzione dell'Errore e Rapporto Gradiente/Curvatura}{77}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Metodo di Newton}{77}{subsection.6.8.2}%
+\contentsline {paragraph}{Matrici di curvatura.}{78}{section*.32}%
+\contentsline {subsection}{\numberline {6.8.3}Hessian-Free Optimization e Gradiente Coniugato}{78}{subsection.6.8.3}%
+\contentsline {paragraph}{Gradiente Coniugato.}{78}{section*.33}%
+\contentsline {section}{\numberline {6.9}Riepilogo dei Metodi di Ottimizzazione}{78}{section.6.9}%
+\contentsline {paragraph}{Regole operative.}{79}{section*.34}%
+\contentsline {chapter}{\numberline {7}Normalization Layers}{80}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Covariate Shift e Internal Covariate Shift}{80}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Batch Normalization}{80}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Idea di Base}{80}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Perché l'Approccio Naïf Non Funziona}{81}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}La Soluzione: un Layer di Normalizzazione Differenziabile}{81}{subsection.7.2.3}%
+\contentsline {paragraph}{Algoritmo formale.}{81}{section*.35}%
+\contentsline {subsection}{\numberline {7.2.4}Parametri Apprendibili $\gamma $ e $\beta $}{82}{subsection.7.2.4}%
+\contentsline {section}{\numberline {7.3}Vantaggi della Batch Normalization}{82}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Benefici Teorici (Motivazione Originale)}{82}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Benefici Pratici}{83}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Posizionamento del Layer BN}{83}{section.7.4}%
+\contentsline {paragraph}{Fase di inferenza.}{84}{section*.36}%
+\contentsline {section}{\numberline {7.5}Varianti di Normalizzazione}{84}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Batch Normalization (BN)}{85}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Layer Normalization (LN)}{85}{subsection.7.5.2}%
+\contentsline {subsection}{\numberline {7.5.3}Instance Normalization (IN)}{85}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}Group Normalization (GN)}{85}{subsection.7.5.4}%
+\contentsline {section}{\numberline {7.6}Perché la Normalizzazione Funziona Davvero?}{86}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Riepilogo e Linee Guida Pratiche}{86}{section.7.7}%
+\contentsline {paragraph}{Regole operative.}{86}{section*.37}%
+\contentsline {chapter}{\numberline {8}Reti Neurali Convoluzionali}{88}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Limiti delle Reti Completamente Connesse sulle Immagini}{88}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Volumi 3D e Connettività Locale}{88}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Organizzazione tridimensionale}{88}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Connettività locale}{89}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Il Layer di Convoluzione}{89}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Operazione di convoluzione}{89}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Mappe di attivazione}{90}{subsection.8.3.2}%
+\contentsline {paragraph}{Esempio.}{91}{section*.38}%
+\contentsline {subsection}{\numberline {8.3.3}Dimensioni spaziali: stride e zero-padding}{91}{subsection.8.3.3}%
+\contentsline {paragraph}{Zero-padding per preservare la dimensione.}{91}{section*.39}%
+\contentsline {subsection}{\numberline {8.3.4}Convoluzione 1\texttimes 1}{92}{subsection.8.3.4}%
+\contentsline {section}{\numberline {8.4}Campi Recettivi}{92}{section.8.4}%
+\contentsline {paragraph}{Problema per immagini grandi.}{93}{section*.40}%
+\contentsline {section}{\numberline {8.5}Cosa Imparano i Filtri Convoluzionali?}{93}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Il Layer di Pooling}{93}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Max Pooling}{93}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Altre varianti di pooling}{94}{subsection.8.6.2}%
+\contentsline {section}{\numberline {8.7}Il Layer Fully Connected}{94}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Architettura Tipica di una ConvNet}{94}{section.8.8}%
+\contentsline {paragraph}{Trend moderni.}{95}{section*.41}%
+\contentsline {subsection}{\numberline {8.8.1}Esempio di stack convoluzionale}{95}{subsection.8.8.1}%
+\contentsline {section}{\numberline {8.9}Proprietà Fondamentali delle ConvNet}{95}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Parameter sharing}{95}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Equivarianza traslazionale}{95}{subsection.8.9.2}%
+\contentsline {subsection}{\numberline {8.9.3}Connessioni sparse}{96}{subsection.8.9.3}%
+\contentsline {section}{\numberline {8.10}Riepilogo dei Componenti Principali}{96}{section.8.10}%
+\contentsline {paragraph}{Regole pratiche.}{96}{section*.42}%
+\contentsline {chapter}{\numberline {9}Reti Ricorrenti}{97}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Motivazione: Modellare Sequenze}{97}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Il Problema della Modellazione Sequenziale}{97}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Rappresentazione Numerica del Linguaggio}{98}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Reti Neurali Ricorrenti (RNN)}{98}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Neuroni con Ricorrenza}{98}{subsection.9.2.1}%
+\contentsline {paragraph}{Implementazione in PyTorch.}{99}{lstlisting.9.1}%
+\contentsline {subsection}{\numberline {9.2.2}Grafo Computazionale nel Tempo}{99}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Architetture Sequenziali}{100}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Backpropagation Through Time (BPTT)}{100}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Algoritmo}{100}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Il Problema dei Gradienti che Svaniscono o Esplodono}{101}{subsection.9.3.2}%
+\contentsline {paragraph}{Soluzioni pratiche.}{101}{section*.44}%
+\contentsline {paragraph}{Nota sul backward pass lineare.}{102}{section*.45}%
+\contentsline {section}{\numberline {9.4}Long Short-Term Memory (LSTM)}{102}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Motivazione: La Memoria Analogica}{102}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Architettura della Cella LSTM}{102}{subsection.9.4.2}%
+\contentsline {subsubsection}{Forget Gate (Cancellazione)}{103}{section*.46}%
+\contentsline {subsubsection}{Input Gate (Memorizzazione)}{104}{section*.47}%
+\contentsline {subsubsection}{Aggiornamento del Cell State}{104}{section*.48}%
+\contentsline {subsubsection}{Output Gate (Uscita)}{104}{section*.49}%
+\contentsline {subsection}{\numberline {9.4.3}Flusso del Gradiente nelle LSTM}{104}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}Gated Recurrent Unit (GRU)}{105}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Architettura}{105}{subsection.9.5.1}%
+\contentsline {paragraph}{Reset gate.}{105}{section*.50}%
+\contentsline {paragraph}{Update gate.}{105}{section*.51}%
+\contentsline {paragraph}{Candidato e aggiornamento.}{105}{section*.52}%
+\contentsline {subsection}{\numberline {9.5.2}Confronto LSTM vs GRU}{106}{subsection.9.5.2}%
+\contentsline {section}{\numberline {9.6}Bi-LSTM e Architetture Avanzate}{106}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}LSTM Bidirezionale}{106}{subsection.9.6.1}%
+\contentsline {subsection}{\numberline {9.6.2}Encoder--Decoder per la Traduzione Automatica}{106}{subsection.9.6.2}%
+\contentsline {section}{\numberline {9.7}Applicazioni delle RNN}{107}{section.9.7}%
+\contentsline {section}{\numberline {9.8}Riepilogo e Linee Guida Pratiche}{107}{section.9.8}%
+\contentsline {paragraph}{Consigli operativi.}{107}{section*.53}%
+\contentsline {chapter}{\numberline {10}Migliorare la Generalizzazione}{108}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Il Problema dell'Overfitting}{108}{section.10.1}%
+\contentsline {paragraph}{Tre approcci principali per prevenirlo.}{108}{section*.54}%
+\contentsline {section}{\numberline {10.2}Metodi per Limitare la Capacità}{109}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Early Stopping}{109}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Intuizione: Capacità come Funzione dei Pesi}{109}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Procedura Pratica}{110}{subsection.10.3.2}%
+\contentsline {paragraph}{Nota.}{110}{section*.55}%
+\contentsline {section}{\numberline {10.4}Weight Decay (Regolarizzazione L2 e L1)}{110}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Penalità L2}{110}{subsection.10.4.1}%
+\contentsline {subsection}{\numberline {10.4.2}Penalità L1}{110}{subsection.10.4.2}%
+\contentsline {section}{\numberline {10.5}Rumore come Regolarizzatore}{111}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Rumore Gaussiano sugli Input e L2 Implicita}{111}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Forme di Rumore più Avanzate}{112}{subsection.10.5.2}%
+\contentsline {section}{\numberline {10.6}Combinare Modelli: Media degli Ensemble}{112}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}Bias-Variance Trade-off}{112}{subsection.10.6.1}%
+\contentsline {subsection}{\numberline {10.6.2}Due Modi di Combinare i Modelli}{112}{subsection.10.6.2}%
+\contentsline {paragraph}{Mixture (media aritmetica).}{112}{section*.56}%
+\contentsline {paragraph}{Product (media geometrica).}{113}{section*.57}%
+\contentsline {subsection}{\numberline {10.6.3}Come Rendere i Modelli Diversi}{113}{subsection.10.6.3}%
+\contentsline {section}{\numberline {10.7}Dropout}{114}{section.10.7}%
+\contentsline {subsection}{\numberline {10.7.1}Definizione e Meccanismo}{114}{subsection.10.7.1}%
+\contentsline {subsection}{\numberline {10.7.2}Dropout come Model Averaging}{114}{subsection.10.7.2}%
+\contentsline {subsection}{\numberline {10.7.3}Inferenza a Tempo di Test: Weight Scaling}{114}{subsection.10.7.3}%
+\contentsline {paragraph}{Dropout multi-layer.}{115}{section*.58}%
+\contentsline {paragraph}{Dropout bayesiano (MC-Dropout).}{115}{section*.59}%
+\contentsline {subsection}{\numberline {10.7.4}Interpretazione della Co-Adattamento}{115}{subsection.10.7.4}%
+\contentsline {section}{\numberline {10.8}Riepilogo e Linee Guida Pratiche}{116}{section.10.8}%
+\contentsline {paragraph}{Regole operative.}{116}{section*.60}%
+\contentsline {chapter}{\numberline {11}Autoencoder}{117}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Autoencoder Classico}{117}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Struttura e Formulazione}{117}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Sparse Autoencoder}{118}{subsection.11.1.2}%
+\contentsline {section}{\numberline {11.2}Deep Autoencoder}{118}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Stacking di Autoencoder}{118}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Confronto con la PCA}{119}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}U-Net}{120}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Segmentazione Semantica}{120}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Architettura U-Net}{120}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Skip Connections}{121}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}Deconvoluzione e Upsampling}{121}{subsection.11.3.4}%
+\contentsline {paragraph}{Layer di output.}{122}{section*.61}%
+\contentsline {section}{\numberline {11.4}Variational Autoencoder (VAE)}{122}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Limitazioni dell'Autoencoder Classico}{122}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Confronto AE vs VAE: Flusso Computazionale}{122}{subsection.11.4.2}%
+\contentsline {subsection}{\numberline {11.4.3}Modello Probabilistico}{123}{subsection.11.4.3}%
+\contentsline {paragraph}{Il teorema di Bayes nel VAE.}{123}{section*.62}%
+\contentsline {subsection}{\numberline {11.4.4}Inferenza Variazionale}{123}{subsection.11.4.4}%
+\contentsline {subsection}{\numberline {11.4.5}Funzione di Loss del VAE}{124}{subsection.11.4.5}%
+\contentsline {subsection}{\numberline {11.4.6}Proprietà dello Spazio Latente Regolarizzato}{124}{subsection.11.4.6}%
+\contentsline {subsection}{\numberline {11.4.7}Il Reparametrization Trick}{125}{subsection.11.4.7}%
+\contentsline {subsection}{\numberline {11.4.8}Schema Completo del VAE}{126}{subsection.11.4.8}%
+\contentsline {paragraph}{Implementazione in PyTorch.}{126}{lstlisting.11.3}%
+\contentsline {section}{\numberline {11.5}Confronto e Riepilogo}{128}{section.11.5}%
+\contentsline {paragraph}{Linee guida pratiche.}{128}{section*.64}%
+\contentsline {chapter}{\numberline {12}Generative Adversarial Networks}{129}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Preliminari: Variabili Aleatorie e Modelli Generativi}{129}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Generazione di Variabili Aleatorie}{129}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Modelli Generativi}{130}{subsection.12.1.2}%
+\contentsline {subsubsection}{Addestramento Diretto}{130}{section*.65}%
+\contentsline {section}{\numberline {12.2}Generative Adversarial Networks}{131}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}L'Idea Fondamentale: Confronto Indiretto}{131}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Architettura GAN}{132}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Architettura Pratica}{133}{subsection.12.2.3}%
+\contentsline {section}{\numberline {12.3}Formulazione Matematica}{133}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Loss del Discriminatore}{133}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Loss del Generatore}{133}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Obiettivo Minimax Complessivo}{134}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.3.4}Interpretazione Game-Theoretic}{134}{subsection.12.3.4}%
+\contentsline {section}{\numberline {12.4}Dinamica dell'Addestramento}{135}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Il Caso Ideale: Discriminatore Oracolo}{135}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}L'Approssimazione Pratica: Reti Neurali}{135}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}Procedura di Addestramento}{136}{subsection.12.4.3}%
+\contentsline {section}{\numberline {12.5}Problematiche nell'Addestramento delle GAN}{136}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Mode Collapse}{136}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Instabilità dell'Addestramento}{137}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {12.5.3}Soluzioni Proposte}{137}{subsection.12.5.3}%
+\contentsline {section}{\numberline {12.6}Implementazione in PyTorch}{137}{section.12.6}%
+\contentsline {section}{\numberline {12.7}Confronto tra Modelli Generativi}{139}{section.12.7}%
+\contentsline {paragraph}{Considerazioni pratiche.}{139}{section*.66}%
+\contentsline {chapter}{\numberline {13}Transformers}{140}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Architettura ad Alto Livello}{140}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Stack Encoder--Decoder}{140}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}Struttura Interna dell'Encoder}{141}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}Struttura del Decoder}{141}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {13.1.4}Flusso dei Tensori}{142}{subsection.13.1.4}%
+\contentsline {section}{\numberline {13.2}Self-Attention}{143}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Query, Key, Value}{143}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Calcolo Matriciale}{143}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Multi-Head Attention}{144}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Positional Encoding}{145}{section.13.4}%
+\contentsline {section}{\numberline {13.5}Residual Connections e Layer Normalization}{146}{section.13.5}%
+\contentsline {section}{\numberline {13.6}Lato Decoder}{147}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}Encoder-Decoder Attention e Generazione}{147}{subsection.13.6.1}%
+\contentsline {subsection}{\numberline {13.6.2}Strato Lineare e Softmax Finale}{148}{subsection.13.6.2}%
+\contentsline {section}{\numberline {13.7}Addestramento del Transformer}{148}{section.13.7}%
+\contentsline {section}{\numberline {13.8}BERT}{148}{section.13.8}%
+\contentsline {subsection}{\numberline {13.8.1}Architettura}{148}{subsection.13.8.1}%
+\contentsline {subsection}{\numberline {13.8.2}Pre-training}{149}{subsection.13.8.2}%
+\contentsline {subsection}{\numberline {13.8.3}Utilizzo}{150}{subsection.13.8.3}%
+\contentsline {section}{\numberline {13.9}GPT}{150}{section.13.9}%
+\contentsline {subsection}{\numberline {13.9.1}Architettura Decoder-Only}{150}{subsection.13.9.1}%
+\contentsline {subsection}{\numberline {13.9.2}Masked Self-Attention: Dettaglio Numerico}{150}{subsection.13.9.2}%
+\contentsline {subsection}{\numberline {13.9.3}Decoder Block e Generazione}{151}{subsection.13.9.3}%
+\contentsline {subsection}{\numberline {13.9.4}Pipeline Self-Attention in GPT-2 Small}{152}{subsection.13.9.4}%
+\contentsline {subsection}{\numberline {13.9.5}Matrici di Peso in GPT-2 Small}{153}{subsection.13.9.5}%
+\contentsline {section}{\numberline {13.10}BERT vs.\ GPT: Confronto}{154}{section.13.10}%
+\contentsline {section}{\numberline {13.11}Riepilogo delle Componenti}{154}{section.13.11}%
+\contentsline {chapter}{\numberline {14}Diffusion Models}{155}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Stable Diffusion: Architettura Generale}{155}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Componenti Principali}{155}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.2}Il Processo di Diffusione}{156}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Forward Diffusion: Corruzione con Rumore}{156}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Addestramento del Predittore del Rumore}{157}{subsection.14.2.2}%
+\contentsline {subsection}{\numberline {14.2.3}Reverse Diffusion: Rimozione Iterativa del Rumore}{157}{subsection.14.2.3}%
+\contentsline {subsection}{\numberline {14.2.4}Noise Schedule}{158}{subsection.14.2.4}%
+\contentsline {section}{\numberline {14.3}Latent Diffusion: Diffusione nello Spazio Compresso}{158}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Motivazione: Limiti della Diffusione nello Spazio dei Pixel}{158}{subsection.14.3.1}%
+\contentsline {subsection}{\numberline {14.3.2}Spazio Latente e Variational Autoencoder}{159}{subsection.14.3.2}%
+\contentsline {subsection}{\numberline {14.3.3}Addestramento e Inferenza Latente}{159}{subsection.14.3.3}%
+\contentsline {paragraph}{Nota sulla risoluzione.}{160}{section*.67}%
+\contentsline {section}{\numberline {14.4}Condizionamento Testuale}{160}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Dalla Diffusione Non Condizionata al Condizionamento}{160}{subsection.14.4.1}%
+\contentsline {subsection}{\numberline {14.4.2}Text Encoder: CLIP}{160}{subsection.14.4.2}%
+\contentsline {paragraph}{Importanza della scelta del language model.}{161}{section*.68}%
+\contentsline {subsection}{\numberline {14.4.3}Cross-Attention: Integrazione del Testo nella UNet}{161}{subsection.14.4.3}%
+\contentsline {paragraph}{Esempio: self-attention e cross-attention nel prompt.}{162}{section*.69}%
+\contentsline {section}{\numberline {14.5}Classifier-Free Guidance (CFG)}{163}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Classifier Guidance}{163}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Classifier-Free Guidance}{163}{subsection.14.5.2}%
+\contentsline {section}{\numberline {14.6}Modalità di Generazione Avanzate}{163}{section.14.6}%
+\contentsline {subsection}{\numberline {14.6.1}Image-to-Image}{163}{subsection.14.6.1}%
+\contentsline {subsection}{\numberline {14.6.2}Inpainting}{164}{subsection.14.6.2}%
+\contentsline {subsection}{\numberline {14.6.3}Depth-to-Image}{164}{subsection.14.6.3}%
+\contentsline {subsection}{\numberline {14.6.4}Altri Condizionamenti: ControlNet}{164}{subsection.14.6.4}%
+\contentsline {section}{\numberline {14.7}Stable Diffusion v1 vs.\ v2}{164}{section.14.7}%
+\contentsline {subsection}{\numberline {14.7.1}Differenze nel Modello}{164}{subsection.14.7.1}%
+\contentsline {subsection}{\numberline {14.7.2}Differenze nei Dati di Addestramento}{164}{subsection.14.7.2}%
+\contentsline {paragraph}{Stable Diffusion v1.4}{164}{section*.70}%
+\contentsline {paragraph}{Stable Diffusion v2.0}{165}{section*.71}%
+\contentsline {paragraph}{Stable Diffusion v2.1}{165}{section*.72}%
+\contentsline {subsection}{\numberline {14.7.3}Differenze nelle Prestazioni}{165}{subsection.14.7.3}%
+\contentsline {section}{\numberline {14.8}Confronto con le GAN e con altri Modelli Generativi}{165}{section.14.8}%
+\contentsline {paragraph}{Considerazioni pratiche.}{166}{section*.73}%
+\contentsline {chapter}{\numberline {15}Graph Neural Networks}{167}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Grafi come Strutture Dati}{167}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Definizione e Attributi}{167}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Grafi in Natura: Esempi di Dominio}{168}{subsection.15.1.2}%
+\contentsline {subsection}{\numberline {15.1.3}Task su Grafi}{169}{subsection.15.1.3}%
+\contentsline {subsection}{\numberline {15.1.4}Dataset di Grafi Reali}{170}{subsection.15.1.4}%
+\contentsline {section}{\numberline {15.2}Le Sfide del Calcolo su Grafi}{170}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Struttura Non Uniforme}{170}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Node-Order Equivariance}{170}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}Scalabilità}{170}{subsection.15.2.3}%
+\contentsline {subsection}{\numberline {15.2.4}Rappresentazione con Liste di Adiacenza}{171}{subsection.15.2.4}%
+\contentsline {section}{\numberline {15.3}Graph Neural Networks}{171}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Definizione e Framework}{171}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}La GNN più Semplice}{171}{subsection.15.3.2}%
+\contentsline {subsection}{\numberline {15.3.3}Predizioni tramite Pooling}{172}{subsection.15.3.3}%
+\contentsline {subsection}{\numberline {15.3.4}Message Passing}{172}{subsection.15.3.4}%
+\contentsline {subsection}{\numberline {15.3.5}Apprendimento di Rappresentazioni degli Archi}{173}{subsection.15.3.5}%
+\contentsline {subsection}{\numberline {15.3.6}Rappresentazioni Globali}{173}{subsection.15.3.6}%
+\contentsline {subsection}{\numberline {15.3.7}Funzioni di Condizionamento}{174}{subsection.15.3.7}%
+\contentsline {section}{\numberline {15.4}GNN in a Nutshell: Formalizzazione}{174}{section.15.4}%
+\contentsline {paragraph}{Node Aggregation.}{175}{section*.74}%
+\contentsline {paragraph}{Node Update.}{175}{section*.75}%
+\contentsline {paragraph}{Graph-level Readout.}{175}{section*.76}%
+\contentsline {section}{\numberline {15.5}Filtri Polinomiali e Graph Laplacian}{175}{section.15.5}%
+\contentsline {subsection}{\numberline {15.5.1}Il Graph Laplacian}{175}{subsection.15.5.1}%
+\contentsline {subsection}{\numberline {15.5.2}Filtri Polinomiali}{176}{subsection.15.5.2}%
+\contentsline {subsection}{\numberline {15.5.3}ChebNet}{176}{subsection.15.5.3}%
+\contentsline {paragraph}{Embedding computation.}{177}{section*.77}%
+\contentsline {section}{\numberline {15.6}Architetture GNN Moderne}{177}{section.15.6}%
+\contentsline {subsection}{\numberline {15.6.1}Graph Convolutional Networks (GCN)}{177}{subsection.15.6.1}%
+\contentsline {paragraph}{Vantaggi GCN.}{177}{section*.78}%
+\contentsline {paragraph}{GCN in a nutshell.}{178}{section*.79}%
+\contentsline {subsection}{\numberline {15.6.2}Graph Attention Networks (GAT)}{178}{subsection.15.6.2}%
+\contentsline {subsection}{\numberline {15.6.3}GraphSAGE}{178}{subsection.15.6.3}%
+\contentsline {subsection}{\numberline {15.6.4}Graph Isomorphism Network (GIN)}{179}{subsection.15.6.4}%
+\contentsline {section}{\numberline {15.7}Confronto tra Architetture GNN}{179}{section.15.7}%
+\contentsline {paragraph}{Considerazioni pratiche.}{179}{section*.80}%
+\contentsline {chapter}{\numberline {16}Energy-Based Models}{181}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Definizione e Intuizione}{181}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Confronto con i Modelli Feed-Forward}{182}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}Superfici Energetiche: Buon e Cattivo Addestramento}{183}{subsection.16.1.2}%
+\contentsline {section}{\numberline {16.2}Architetture EBM per la Predizione Multimodale}{184}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Joint Embedding}{184}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}Modelli a Variabili Latenti}{185}{subsection.16.2.2}%
+\contentsline {paragraph}{Esempi applicativi.}{185}{section*.81}%
+\contentsline {subsection}{\numberline {16.2.3}LV-EBM Condizionale con Regolarizzazione}{185}{subsection.16.2.3}%
+\contentsline {section}{\numberline {16.3}Addestramento degli EBM}{185}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Metodi Contrastivi}{186}{subsection.16.3.1}%
+\contentsline {paragraph}{Interpretazione probabilistica.}{187}{section*.82}%
+\contentsline {paragraph}{Massima verosimiglianza.}{187}{section*.83}%
+\contentsline {paragraph}{Problema con la massima verosimiglianza.}{187}{section*.84}%
+\contentsline {subsection}{\numberline {16.3.2}Addestramento con MCMC}{188}{subsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.3.3}Metodi Regolarizzati e Architetturali}{188}{subsection.16.3.3}%
+\contentsline {section}{\numberline {16.4}Funzioni di Perdita per EBM}{188}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Joint Embedding Contrastivo}{189}{section.16.5}%
+\contentsline {subsection}{\numberline {16.5.1}Joint Embedding Non Contrastivo}{190}{subsection.16.5.1}%
+\contentsline {section}{\numberline {16.6}Self-Supervised Learning}{190}{section.16.6}%
+\contentsline {subsection}{\numberline {16.6.1}SSL come Riempimento dei Vuoti}{191}{subsection.16.6.1}%
+\contentsline {paragraph}{Wav2Vec 2.0.}{191}{section*.85}%
+\contentsline {paragraph}{Modelli linguistici moderni.}{191}{section*.86}%
+\contentsline {section}{\numberline {16.7}Connessioni con i Modelli Generativi}{191}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Relazione con i VAE}{191}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Confronto con i Metodi Contrastivi e i VAE}{192}{subsection.16.7.2}%
+\contentsline {section}{\numberline {16.8}Architettura Pratica: ConvNet come EBM}{192}{section.16.8}%
+\contentsline {chapter}{\numberline {17}Flow Matching e Stable Diffusion 3}{193}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Il Problema della Modellazione Generativa}{193}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Mappatura Diretta}{193}{subsection.17.1.1}%
+\contentsline {subsection}{\numberline {17.1.2}Processi di Markov a Tempo Continuo}{194}{subsection.17.1.2}%
+\contentsline {subsection}{\numberline {17.1.3}Vantaggi dei Flussi Rispetto alla Diffusione}{194}{subsection.17.1.3}%
+\contentsline {section}{\numberline {17.2}Flussi, Campi Vettoriali e Velocità}{195}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Relazione tra Flusso e Campo Vettoriale}{195}{subsection.17.2.1}%
+\contentsline {subsection}{\numberline {17.2.2}Il Flusso come Funzione di Warping}{195}{subsection.17.2.2}%
+\contentsline {subsection}{\numberline {17.2.3}Velocità e Distribuzione Marginale}{195}{subsection.17.2.3}%
+\contentsline {section}{\numberline {17.3}L'Obiettivo di Flow Matching}{196}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Formulazione Generale}{196}{subsection.17.3.1}%
+\contentsline {subsection}{\numberline {17.3.2}Versione Più Semplice di Flow Matching}{197}{subsection.17.3.2}%
+\contentsline {section}{\numberline {17.4}Flussi Condizionali e il Trucco della Marginalizzazione}{197}{section.17.4}%
+\contentsline {subsection}{\numberline {17.4.1}Costruzione del Flusso da Flussi Condizionali}{197}{subsection.17.4.1}%
+\contentsline {subsection}{\numberline {17.4.2}Teorema di Marginalizzazione}{197}{subsection.17.4.2}%
+\contentsline {section}{\numberline {17.5}Funzioni di Perdita per Flow Matching}{198}{section.17.5}%
+\contentsline {subsection}{\numberline {17.5.1}Perdita FM e Perdita CFM}{198}{subsection.17.5.1}%
+\contentsline {subsection}{\numberline {17.5.2}Perdita CFM Generalizzata (Divergenza di Bregman)}{198}{subsection.17.5.2}%
+\contentsline {section}{\numberline {17.6}Scelta del Flusso Condizionale: Trasporto Ottimale}{198}{section.17.6}%
+\contentsline {subsection}{\numberline {17.6.1}Criteri per la Scelta di $\psi _t(x \mid x_1)$}{198}{subsection.17.6.1}%
+\contentsline {subsection}{\numberline {17.6.2}Flow Matching con Optimal Transport Condizionale}{199}{subsection.17.6.2}%
+\contentsline {section}{\numberline {17.7}Traiettorie Affini e Percorsi Gaussiani}{200}{section.17.7}%
+\contentsline {subsection}{\numberline {17.7.1}Traiettorie Affini}{200}{subsection.17.7.1}%
+\contentsline {subsection}{\numberline {17.7.2}Percorsi Gaussiani e Connessione con la Diffusione}{200}{subsection.17.7.2}%
+\contentsline {section}{\numberline {17.8}Reflow: Raddrizzamento delle Traiettorie}{201}{section.17.8}%
+\contentsline {subsection}{\numberline {17.8.1}Motivazione}{201}{subsection.17.8.1}%
+\contentsline {subsection}{\numberline {17.8.2}Effetti del Reflow}{202}{subsection.17.8.2}%
+\contentsline {section}{\numberline {17.9}Flow Matching Condizionato}{202}{section.17.9}%
+\contentsline {subsection}{\numberline {17.9.1}Modelli Generativi Condizionali}{202}{subsection.17.9.1}%
+\contentsline {subsection}{\numberline {17.9.2}Guidance per Flow Matching}{203}{subsection.17.9.2}%
+\contentsline {paragraph}{Classifier Guidance.}{203}{section*.87}%
+\contentsline {paragraph}{Classifier-Free Guidance (CFG).}{203}{section*.88}%
+\contentsline {section}{\numberline {17.10}Multimodal Diffusion Transformers (MMDiT)}{203}{section.17.10}%
+\contentsline {subsection}{\numberline {17.10.1}Diffusion Transformer (DiT)}{203}{subsection.17.10.1}%
+\contentsline {subsection}{\numberline {17.10.2}Multi-Modal Diffusion Transformer (MMDiT)}{203}{subsection.17.10.2}%
+\contentsline {section}{\numberline {17.11}Stable Diffusion 3}{204}{section.17.11}%
+\contentsline {subsection}{\numberline {17.11.1}Architettura Complessiva}{204}{subsection.17.11.1}%
+\contentsline {subsection}{\numberline {17.11.2}Il Ruolo di T5 in SD3}{205}{subsection.17.11.2}%
+\contentsline {subsection}{\numberline {17.11.3}Formazione del Modello e Scelte di Design}{206}{subsection.17.11.3}%
+\contentsline {paragraph}{Flow Matching con OT condizionale.}{206}{section*.89}%
+\contentsline {paragraph}{Architettura MMDiT scalabile.}{206}{section*.90}%
+\contentsline {paragraph}{Tre encoder testuali complementari.}{206}{section*.91}%
+\contentsline {section}{\numberline {17.12}Procedura di Addestramento e Campionamento}{206}{section.17.12}%
+\contentsline {subsection}{\numberline {17.12.1}Procedura di Training}{206}{subsection.17.12.1}%
+\contentsline {subsection}{\numberline {17.12.2}Campionamento}{206}{subsection.17.12.2}%
+\contentsline {section}{\numberline {17.13}Connessioni con Altri Modelli Generativi}{207}{section.17.13}%
+\contentsline {chapter}{\numberline {18}Advanced Multi-Head Attention}{208}{chapter.18}%
+\contentsline {section}{\numberline {18.1}KV Cache}{208}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Riepilogo della Multi-Head Attention}{208}{subsection.18.1.1}%
+\contentsline {subsection}{\numberline {18.1.2}Computazione a ogni passo autoregressivo}{209}{subsection.18.1.2}%
+\contentsline {subsection}{\numberline {18.1.3}Meccanismo della KV Cache}{209}{subsection.18.1.3}%
+\contentsline {subsection}{\numberline {18.1.4}Dimensione della KV Cache}{210}{subsection.18.1.4}%
+\contentsline {section}{\numberline {18.2}Multi-Query Attention}{211}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Motivazione}{211}{subsection.18.2.1}%
+\contentsline {subsection}{\numberline {18.2.2}Architettura}{211}{subsection.18.2.2}%
+\contentsline {subsection}{\numberline {18.2.3}Dimensione della KV Cache con MQA}{212}{subsection.18.2.3}%
+\contentsline {subsection}{\numberline {18.2.4}Impatto sulle Prestazioni}{212}{subsection.18.2.4}%
+\contentsline {section}{\numberline {18.3}Grouped-Query Attention}{213}{section.18.3}%
+\contentsline {subsection}{\numberline {18.3.1}Motivazione e Architettura}{213}{subsection.18.3.1}%
+\contentsline {subsection}{\numberline {18.3.2}Dimensione della KV Cache con GQA}{213}{subsection.18.3.2}%
+\contentsline {subsection}{\numberline {18.3.3}Impatto sulle Prestazioni}{214}{subsection.18.3.3}%
+\contentsline {section}{\numberline {18.4}Rotary Positional Embeddings (RoPE)}{214}{section.18.4}%
+\contentsline {subsection}{\numberline {18.4.1}Limiti degli Embedding Posizionali Assoluti}{214}{subsection.18.4.1}%
+\contentsline {subsection}{\numberline {18.4.2}Embedding Posizionali Relativi}{214}{subsection.18.4.2}%
+\contentsline {subsection}{\numberline {18.4.3}Matrice di Rotazione}{214}{subsection.18.4.3}%
+\contentsline {subsection}{\numberline {18.4.4}Formulazione di RoPE}{215}{subsection.18.4.4}%
+\contentsline {subsection}{\numberline {18.4.5}Estensione a dimensioni superiori}{216}{subsection.18.4.5}%
+\contentsline {paragraph}{Compatibilità con la KV Cache.}{216}{section*.92}%
+\contentsline {section}{\numberline {18.5}Multi-Head Latent Attention}{216}{section.18.5}%
+\contentsline {subsection}{\numberline {18.5.1}Motivazione}{216}{subsection.18.5.1}%
+\contentsline {subsection}{\numberline {18.5.2}Compressione della KV Cache}{217}{subsection.18.5.2}%
+\contentsline {subsection}{\numberline {18.5.3}Assorbimento delle matrici di proiezione}{217}{subsection.18.5.3}%
+\contentsline {subsection}{\numberline {18.5.4}RoPE Disaccoppiata}{218}{subsection.18.5.4}%
+\contentsline {subsection}{\numberline {18.5.5}Calcolo Completo di MLA}{218}{subsection.18.5.5}%
+\contentsline {subsection}{\numberline {18.5.6}Dimensione della KV Cache con MLA}{218}{subsection.18.5.6}%
+\contentsline {section}{\numberline {18.6}Riepilogo e Confronto}{219}{section.18.6}%
+\contentsline {paragraph}{Osservazione sull'embedding posizionale.}{219}{section*.115}%

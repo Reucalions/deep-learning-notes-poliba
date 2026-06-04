@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{40}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,36 @@ Mistral AI.
 \newblock Mixtral of experts.
 \newblock \url{https://arxiv.org/abs/2401.04088}, 2023.
 
+\bibitem[Ainslie et~al.(2023)Ainslie, Lee-Thorp, de~Jong, Zelasko, Sanghai, and
+  Tay]{ainslie2023gqa}
+Joshua Ainslie, James Lee-Thorp, Michiel de~Jong, Yury Zelasko, Sumit Sanghai,
+  and Yi~Tay.
+\newblock {GQA}: Training generalized multi-query transformer models from
+  multi-head checkpoints.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, 2023.
+
+\bibitem[Albergo and Vanden-Eijnden(2023)]{albergo2022building}
+Michael~S. Albergo and Eric Vanden-Eijnden.
+\newblock Building normalizing flows with stochastic interpolants.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2023.
+
+\bibitem[Baevski et~al.(2020)Baevski, Zhou, Mohamed, and
+  Auli]{baevski2020wav2vec}
+Alexei Baevski, Henry Zhou, Abdelrahman Mohamed, and Michael Auli.
+\newblock wav2vec 2.0: A framework for self-supervised learning of speech
+  representations.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2020.
+
+\bibitem[Bahdanau et~al.(2015)Bahdanau, Cho, and Bengio]{bahdanau2015attention}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and
+  translate.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2015.
+
 \bibitem[Bishop and Bishop(2024)]{bishop2024}
 Christopher~M. Bishop and Hugh Bishop.
 \newblock \emph{Deep Learning: Foundations and Concepts}.
@@ -18,10 +48,116 @@ Christopher~M. Bishop and Hugh Bishop.
 \newblock URL \url{https://www.bishopbook.com}.
 \newblock Freely available online at \url{https://www.bishopbook.com}.
 
+\bibitem[Chen et~al.(2023)Chen, Liang, Huang, Real, Wang, Liu, Pham, Dong,
+  Luong, Hsieh, Lu, and Le]{chen2023lion}
+Xiangning Chen, Chen Liang, Da~Huang, Esteban Real, Kaiyuan Wang, Yao Liu, Hieu
+  Pham, Xuanyi Dong, Thang Luong, Cho-Jui Hsieh, Yifeng Lu, and Quoc~V. Le.
+\newblock Symbolic discovery of optimization algorithms.
+\newblock \emph{Advances in Neural Information Processing Systems (NeurIPS)},
+  2023.
+
+\bibitem[Chen and He(2021)]{chen2021simsiam}
+Xinlei Chen and Kaiming He.
+\newblock Exploring simple {Siamese} representation learning.
+\newblock In \emph{IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 15750--15758, 2021.
+
+\bibitem[Cho et~al.(2014)Cho, van Merri{\"{e}}nboer, Gulcehre, Bahdanau,
+  Bougares, Schwenk, and Bengio]{cho2014gru}
+Kyunghyun Cho, Bart van Merri{\"{e}}nboer, Caglar Gulcehre, Dzmitry Bahdanau,
+  Fethi Bougares, Holger Schwenk, and Yoshua Bengio.
+\newblock Learning phrase representations using {RNN} encoder-decoder for
+  statistical machine translation.
+\newblock In \emph{Proceedings of the 2014 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, pages 1724--1734, 2014.
+
+\bibitem[{DeepSeek-AI}(2024)]{deepseekv2_2024}
+{DeepSeek-AI}.
+\newblock {DeepSeek-V2}: A strong, economical, and efficient mixture-of-experts
+  language model.
+\newblock \url{https://arxiv.org/abs/2405.04434}, 2024.
+
+\bibitem[Du and Mordatch(2019)]{du2019implicit}
+Yilun Du and Igor Mordatch.
+\newblock Implicit generation and modeling with energy based models.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2019.
+
+\bibitem[Esser et~al.(2024)Esser, Kulal, Blattmann, Entezari, M{\"{u}}ller,
+  Saini, Levi, Lorenz, Sauer, Boesel, Podell, Dockhorn, English, Lacey,
+  Goodwin, Marek, and Rombach]{esser2024sd3}
+Patrick Esser, Sumith Kulal, Andreas Blattmann, Rahim Entezari, Jonas
+  M{\"{u}}ller, Harry Saini, Yam Levi, Dominik Lorenz, Axel Sauer, Frederic
+  Boesel, Dustin Podell, Tim Dockhorn, Zion English, Kyle Lacey, Alex Goodwin,
+  Yannik Marek, and Robin Rombach.
+\newblock Scaling rectified flow transformers for high-resolution image
+  synthesis.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, 2024.
+
+\bibitem[Glorot and Bengio(2010)]{glorot2010}
+Xavier Glorot and Yoshua Bengio.
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock In \emph{Proceedings of the 13th International Conference on
+  Artificial Intelligence and Statistics (AISTATS)}, pages 249--256, 2010.
+
+\bibitem[Grill et~al.(2020)Grill, Strub, Altch{\'e}, Tallec, Richemond,
+  Buchatskaya, Doersch, Pires, Guo, Azar, Piot, Kavukcuoglu, Munos, and
+  Valko]{grill2020byol}
+Jean-Bastien Grill, Florian Strub, Florent Altch{\'e}, Corentin Tallec,
+  Pierre~H. Richemond, Elena Buchatskaya, Carl Doersch, Bernardo~Avila Pires,
+  Zhaohan~Daniel Guo, Mohammad~Gheshlaghi Azar, Bilal Piot, Koray Kavukcuoglu,
+  R{\'e}mi Munos, and Michal Valko.
+\newblock Bootstrap your own latent: A new approach to self-supervised
+  learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2020.
+
+\bibitem[Ho and Salimans(2022)]{ho2022cfg}
+Jonathan Ho and Tim Salimans.
+\newblock Classifier-free diffusion guidance.
+\newblock \url{https://arxiv.org/abs/2207.12598}, 2022.
+
+\bibitem[Ho et~al.(2020)Ho, Jain, and Abbeel]{ho2020ddpm}
+Jonathan Ho, Ajay Jain, and Pieter Abbeel.
+\newblock Denoising diffusion probabilistic models.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2020.
+
+\bibitem[Hochreiter and Schmidhuber(1997)]{hochreiter1997lstm}
+Sepp Hochreiter and J{\"{u}}rgen Schmidhuber.
+\newblock Long short-term memory.
+\newblock \emph{Neural Computation}, 9\penalty0 (8):\penalty0 1735--1780, 1997.
+
+\bibitem[Ioffe and Szegedy(2015)]{ioffe2015batch}
+Sergey Ioffe and Christian Szegedy.
+\newblock Batch normalization: Accelerating deep network training by reducing
+  internal covariate shift.
+\newblock In \emph{International Conference on Machine Learning (ICML)}, pages
+  448--456, 2015.
+
 \bibitem[Jacobs et~al.(1991)Jacobs, Jordan, Nowlan, and Hinton]{jacobs1991}
 Robert~A. Jacobs, Michael~I. Jordan, Steven~J. Nowlan, and Geoffrey~E. Hinton.
 \newblock Adaptive mixtures of local experts.
 \newblock \emph{Neural Computation}, 3\penalty0 (1):\penalty0 79--87, 1991.
+
+\bibitem[Kingma and Ba(2015)]{kingma2014adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2015.
+
+\bibitem[Kingma and Welling(2014{\natexlab{a}})]{kingma2013vae}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2014{\natexlab{a}}.
+
+\bibitem[Kingma and Welling(2014{\natexlab{b}})]{kingma2014vae}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2014{\natexlab{b}}.
 
 \bibitem[LeCun and Canziani(2021)]{lecun2021}
 Yann LeCun and Alfredo Canziani.
@@ -32,16 +168,114 @@ Yann LeCun and Alfredo Canziani.
 \bibitem[LeCun et~al.(1998)LeCun, Bottou, Bengio, and Haffner]{lecun1998}
 Yann LeCun, L{\'e}on Bottou, Yoshua Bengio, and Patrick Haffner.
 \newblock Gradient-based learning applied to document recognition.
-\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0 2278--2324, 1998.
+\newblock \emph{Proceedings of the IEEE}, 86\penalty0 (11):\penalty0
+  2278--2324, 1998.
+
+\bibitem[LeCun et~al.(2006)LeCun, Chopra, Hadsell, Ranzato, and
+  Huang]{lecun2006tutorial}
+Yann LeCun, Sumit Chopra, Raia Hadsell, Marc'Aurelio Ranzato, and Fu~Jie Huang.
+\newblock A tutorial on energy-based learning.
+\newblock \emph{Predicting Structured Data, MIT Press}, 2006.
+
+\bibitem[Li et~al.(2017)Li, Kadav, Durdanovic, Samaras, and
+  Graf]{li2020rethinking}
+Hao Li, Asim Kadav, Igor Durdanovic, Haralampos Samaras, and Hans~Peter Graf.
+\newblock Pruning filters for efficient convnets.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2017.
+
+\bibitem[Lipman et~al.(2023)Lipman, Chen, Ben-Hamu, Nickel, and
+  Le]{lipman2022flow}
+Yaron Lipman, Ricky T.~Q. Chen, Heli Ben-Hamu, Maximilian Nickel, and Matt Le.
+\newblock Flow matching for generative modeling.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2023.
+
+\bibitem[Liu et~al.(2022)Liu, Gong, and Liu]{liu2022flow}
+Xingchao Liu, Chengyue Gong, and Qiang Liu.
+\newblock Flow straight and fast: Learning to generate and transfer data with
+  rectified flow.
+\newblock \url{https://arxiv.org/abs/2209.03003}, 2022.
+
+\bibitem[Peebles and Xie(2023)]{peebles2023dit}
+William Peebles and Saining Xie.
+\newblock Scalable diffusion models with transformers.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, 2023.
+
+\bibitem[Raffel et~al.(2020)Raffel, Shazeer, Roberts, Lee, Narang, Matena,
+  Zhou, Li, and Liu]{raffel2020t5}
+Colin Raffel, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael
+  Matena, Yanqi Zhou, Wei Li, and Peter~J. Liu.
+\newblock Exploring the limits of transfer learning with a unified text-to-text
+  transformer.
+\newblock \emph{Journal of Machine Learning Research}, 21\penalty0
+  (140):\penalty0 1--67, 2020.
+
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and
+  Brox]{ronneberger2015unet}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock {U-Net}: Convolutional networks for biomedical image segmentation.
+\newblock In \emph{Medical Image Computing and Computer-Assisted Intervention
+  (MICCAI)}, pages 234--241, 2015.
 
 \bibitem[Rumelhart et~al.(1986)Rumelhart, Hinton, and Williams]{rumelhart1986}
 David~E. Rumelhart, Geoffrey~E. Hinton, and Ronald~J. Williams.
 \newblock Learning representations by back-propagating errors.
 \newblock \emph{Nature}, 323:\penalty0 533--536, 1986.
 
-\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017}
-Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\bibitem[Shazeer(2019)]{shazeer2019fast}
+Noam Shazeer.
+\newblock Fast transformer decoding: One write-head is all you need.
+\newblock \url{https://arxiv.org/abs/1911.02150}, 2019.
+
+\bibitem[Song et~al.(2021)Song, Meng, and Ermon]{song2020ddim}
+Jiaming Song, Chenlin Meng, and Stefano Ermon.
+\newblock Denoising diffusion implicit models.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2021.
+
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov]{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock \emph{Journal of Machine Learning Research}, 15:\penalty0 1929--1958,
+  2014.
+
+\bibitem[Su et~al.(2024)Su, Ahmed, Lu, Pan, Bo, and Liu]{su2024rope}
+Jianlin Su, Murtadha Ahmed, Yu~Lu, Shengfeng Pan, Wen Bo, and Yunfeng Liu.
+\newblock {RoFormer}: Enhanced transformer with rotary position embedding.
+\newblock \emph{Neurocomputing}, 568, 2024.
+
+\bibitem[Sutskever et~al.(2011)Sutskever, Martens, and Hinton]{sutskever2012}
+Ilya Sutskever, James Martens, and Geoffrey~E. Hinton.
+\newblock Generating text with recurrent neural networks.
+\newblock In \emph{Proceedings of the 28th International Conference on Machine
+  Learning (ICML)}, pages 1017--1024, 2011.
+
+\bibitem[Taigman et~al.(2014)Taigman, Yang, Ranzato, and
+  Wolf]{taigman2014deepface}
+Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, and Lior Wolf.
+\newblock {DeepFace}: Closing the gap to human-level performance in face
+  verification.
+\newblock In \emph{IEEE Conference on Computer Vision and Pattern Recognition
+  (CVPR)}, pages 1701--1708, 2014.
+
+\bibitem[Vaswani et~al.(2017{\natexlab{a}})Vaswani, Shazeer, Parmar, Uszkoreit,
+  Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
 \newblock Attention is all you need.
-\newblock In \emph{Advances in Neural Information Processing Systems (NeurIPS)}, volume~30, 2017.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, volume~30, 2017{\natexlab{a}}.
+
+\bibitem[Vaswani et~al.(2017{\natexlab{b}})Vaswani, Shazeer, Parmar, Uszkoreit,
+  Jones, Gomez, Kaiser, and Polosukhin]{vaswani2017attention}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, {\L}ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, volume~30, 2017{\natexlab{b}}.
 
 \end{thebibliography}

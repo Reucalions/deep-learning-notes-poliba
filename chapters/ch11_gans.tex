@@ -543,29 +543,17 @@ for step in range(10_000):
   \caption{Confronto tra i principali framework generativi.}
   \label{tab:gen-comparison}
   \small
-  \begin{tabular}{llll}
+  \begin{tabularx}{\linewidth}{l X X X}
     \toprule
     \textbf{Modello} & \textbf{Spazio latente}
       & \textbf{Qualità campioni} & \textbf{Criticità} \\
     \midrule
-    VAE
-      & Distribuzione $\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2)$
-      & Media (campioni sfocati)
-      & Ottimizzazione ELBO \\
-    GAN
-      & Vettore latente $\mathbf{z} \sim p_z$
-      & Alta (campioni nitidi)
-      & Mode collapse, instabilità \\
-    Normalizing Flow
-      & Biiezione esatta
-      & Alta (log-likelihood esatta)
-      & Architettura vincolata \\
-    Diffusion Model
-      & Processo di diffusione
-      & Molto alta (SOTA)
-      & Inferenza lenta \\
+    VAE              & Distribuzione $\mathcal{N}(\boldsymbol{\mu}, \boldsymbol{\sigma}^2)$ & Media (campioni sfocati)    & Ottimizzazione ELBO \\
+    GAN              & Vettore latente $\mathbf{z} \sim p_z$                               & Alta (campioni nitidi)      & Mode collapse, instabilità \\
+    Normalizing Flow & Biiezione esatta                                                     & Alta (log-likelihood esatta)& Architettura vincolata \\
+    Diffusion Model  & Processo di diffusione                                               & Molto alta (SOTA)           & Inferenza lenta \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 Le GAN eccellono nella \textbf{qualità visiva} dei campioni generati,

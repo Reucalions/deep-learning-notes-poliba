@@ -171,7 +171,7 @@ automaticamente le feature rilevanti.
   \caption{Confronto tra penalità L1 e L2.}
   \label{tab:l1-vs-l2}
   \small
-  \begin{tabular}{lll}
+  \begin{tabularx}{\linewidth}{l X X}
     \toprule
     \textbf{Proprietà} & \textbf{L2 (Ridge)} & \textbf{L1 (Lasso)} \\
     \midrule
@@ -180,9 +180,9 @@ automaticamente le feature rilevanti.
     Prior bayesiana & Gaussiana & Laplace \\
     Derivabilità & Sì & No in $w_i=0$ \\
     Feature selection implicita & No & Sì \\
-    Implementazione PyTorch & \texttt{weight\_decay} in optimizer & Penalità manuale \\
+    Impl.\ PyTorch & \texttt{weight\_decay} nell'optimizer & Penalità manuale \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 %------------------------------------------------------------
@@ -446,19 +446,19 @@ model.eval()    # Dropout disattivo (mean net)
   \caption{Guida alla scelta della strategia di regolarizzazione.}
   \label{tab:regularization-guide}
   \small
-  \begin{tabular}{lll}
+  \begin{tabularx}{\linewidth}{X l X}
     \toprule
     \textbf{Scenario} & \textbf{Strategia} & \textbf{Note} \\
     \midrule
-    Dataset piccolo, modello semplice & L2 + Early Stopping & Baseline robusta \\
-    Feature sparse / selezione & L1 (Lasso) & Produce pesi esattamente zero \\
-    Reti profonde, dati medi & Dropout ($p=0.5$) & Standard per FC layers \\
-    Reti convoluzionali & Batch Norm + Weight Decay & Dropout meno efficace nei conv \\
-    Budget di compute limitato & Early Stopping & Costo zero aggiuntivo \\
-    Incertezza predittiva & MC-Dropout & Stime probabilistiche \\
-    Massima accuratezza disponibile & Ensemble + Dropout & Costoso ma efficace \\
+    Dataset piccolo, modello semplice     & L2 + Early Stopping       & Baseline robusta \\
+    Feature sparse / selezione            & L1 (Lasso)                & Produce pesi esattamente zero \\
+    Reti profonde, dati medi              & Dropout ($p=0.5$)         & Standard per FC layers \\
+    Reti convoluzionali                   & Batch Norm + Weight Decay & Dropout meno efficace nei conv \\
+    Budget di compute limitato            & Early Stopping            & Costo zero aggiuntivo \\
+    Incertezza predittiva                 & MC-Dropout                & Stime probabilistiche \\
+    Massima accuratezza disponibile       & Ensemble + Dropout        & Costoso ma efficace \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Regole operative.}

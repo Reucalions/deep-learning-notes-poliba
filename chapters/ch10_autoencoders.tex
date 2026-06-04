@@ -531,22 +531,18 @@ def vae_loss(x_hat, x, mu, log_var):
   \caption{Confronto tra le varianti di autoencoder trattate.}
   \label{tab:ae-comparison}
   \small
-  \begin{tabular}{lllll}
+  \begin{tabularx}{\linewidth}{l X l c X}
     \toprule
-    \textbf{Modello} & \textbf{Vincolo} & \textbf{Spazio latente}
-      & \textbf{Generativo} & \textbf{Applicazione tipica} \\
+    \textbf{Modello} & \textbf{Vincolo} & \textbf{Sp.\ latente}
+      & \textbf{Gen.} & \textbf{Applicazione tipica} \\
     \midrule
-    AE classico & $k < d$ & Punto & No & Compressione, pre-training \\
-    Sparse AE   & $\ell_1$ su $\mathbf{a}$ & Punto sparso & No &
-      Feature learning \\
-    Deep AE     & Più livelli & Punto profondo & No &
-      Compressione non lineare \\
-    U-Net       & Skip connections & --- & No &
-      Segmentazione semantica \\
-    VAE         & KL$(\cdot\|\mathcal{N}(\mathbf{0},\mathbf{I}))$ &
-      Distribuzione & Sì & Generazione, interpolazione \\
+    AE classico & $k < d$                                             & Punto          & No & Compressione, pre-training \\
+    Sparse AE   & $\ell_1$ su $\mathbf{a}$                            & Punto sparso   & No & Feature learning \\
+    Deep AE     & Più livelli                                         & Punto profondo & No & Compressione non lineare \\
+    U-Net       & Skip connections                                    & ---            & No & Segmentazione semantica \\
+    VAE         & $\mathrm{KL}(\cdot\|\mathcal{N}(\mathbf{0},\mathbf{I}))$ & Distribuzione  & Sì & Generazione, interpolazione \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Linee guida pratiche.}

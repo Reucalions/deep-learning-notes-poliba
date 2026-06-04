@@ -568,38 +568,18 @@ una GAN genera un campione in un singolo passaggio forward.
   \caption{Confronto tra modelli generativi principali.}
   \label{tab:diffusion-comparison}
   \small
-  \begin{tabular}{lllll}
+  \begin{tabularx}{\linewidth}{l l l l X}
     \toprule
-    \textbf{Modello} & \textbf{Spazio di lavoro}
+    \textbf{Modello} & \textbf{Spazio}
       & \textbf{Qualità} & \textbf{Diversità} & \textbf{Criticità} \\
     \midrule
-    GAN
-      & Pixel / latente
-      & Alta
-      & Bassa (mode collapse)
-      & Instabilità, mode collapse \\
-    VAE
-      & Latente
-      & Media
-      & Alta
-      & Campioni sfocati \\
-    Normalizing Flow
-      & Biiezione
-      & Alta
-      & Alta
-      & Architettura vincolata \\
-    Diffusion (pixel)
-      & Pixel
-      & Molto alta
-      & Alta
-      & Inferenza molto lenta \\
-    Latent Diffusion
-      & Latente
-      & Molto alta (SOTA)
-      & Alta
-      & Inferenza lenta \\
+    GAN              & Pixel/latente & Alta           & Bassa         & Instabilità, mode collapse \\
+    VAE              & Latente       & Media          & Alta          & Campioni sfocati \\
+    Normalizing Flow & Biiezione     & Alta           & Alta          & Architettura vincolata \\
+    Diffusion pixel  & Pixel         & Molto alta     & Alta          & Inferenza molto lenta \\
+    Latent Diffusion & Latente       & Molto alta     & Alta          & Inferenza lenta \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Considerazioni pratiche.}

@@ -603,38 +603,18 @@ in spazi di feature discreti.
   \caption{Confronto tra le principali architetture GNN moderne.}
   \label{tab:gnn-comparison}
   \small
-  \begin{tabular}{lllll}
+  \begin{tabularx}{\linewidth}{l X c l X}
     \toprule
     \textbf{Modello} & \textbf{Aggregazione}
-      & \textbf{Attenzione} & \textbf{Espressività} & \textbf{Note} \\
+      & \textbf{Att.} & \textbf{Espressività} & \textbf{Note} \\
     \midrule
-    GCN
-      & Media normalizzata
-      & No
-      & Media
-      & Semplice, efficiente \\
-    GAT
-      & Media pesata (attention)
-      & Sì (appresa)
-      & Alta
-      & Multi-head disponibile \\
-    GraphSAGE
-      & Mean / Max / LSTM
-      & No
-      & Media--Alta
-      & Neighbourhood sampling \\
-    GIN
-      & Somma + $\epsilon$
-      & No
-      & Massima (WL)
-      & Teoricamente ottimale \\
-    ChebNet
-      & Filtro polinomiale
-      & No
-      & Alta
-      & Base spettrale \\
+    GCN       & Media normalizzata       & No           & Media       & Semplice, efficiente \\
+    GAT       & Media pesata (attention) & Sì (appresa) & Alta        & Multi-head disponibile \\
+    GraphSAGE & Mean / Max / LSTM        & No           & Media--Alta & Neighbourhood sampling \\
+    GIN       & Somma + $\epsilon$       & No           & Massima (WL)& Teoricamente ottimale \\
+    ChebNet   & Filtro polinomiale       & No           & Alta        & Base spettrale \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Considerazioni pratiche.}

@@ -643,21 +643,21 @@ e del corso NYU-DL possono essere sintetizzate nella Tabella~\ref{tab:activation
   \caption{Guida pratica alla scelta della funzione di attivazione.}
   \label{tab:activation_guide}
   \small
-  \begin{tabular}{llll}
+  \begin{tabularx}{\linewidth}{l l l X}
     \toprule
     \textbf{Funzione} & \textbf{Output range} & \textbf{Gradiente} & \textbf{Uso tipico} \\
     \midrule
-    ReLU         & $[0, +\infty)$  & Non saturante (pos.) & Default hidden layer \\
-    Leaky ReLU   & $(-\infty,+\infty)$ & Non saturante  & ReLU con dead neurons \\
-    PReLU        & $(-\infty,+\infty)$ & Apprendibile   & Quando LReLU è insufficiente \\
-    ELU          & $(-\alpha, +\infty)$ & Non saturante & Hidden, mean $\approx 0$ \\
-    SELU         & $(\approx{-1{,}76}, +\infty)$ & Self-norm. & Reti senza BatchNorm \\
-    GELU         & $\approx(-0{,}17, +\infty)$ & Non mon.  & Transformer (BERT, GPT) \\
-    Sigmoid      & $(0, 1)$        & Saturante          & Output prob.\ binaria, gate \\
-    Tanh         & $(-1, 1)$       & Saturante          & RNN, output centrato \\
-    Softmax      & $(0,1)^C$, sum $=1$ & Vettoriale    & Output multiclasse \\
+    ReLU       & $[0, +\infty)$                  & Non sat.\ (pos.) & Default hidden layer \\
+    Leaky ReLU & $(-\infty,+\infty)$              & Non saturante    & ReLU con dead neurons \\
+    PReLU      & $(-\infty,+\infty)$              & Apprendibile     & Quando LReLU è insufficiente \\
+    ELU        & $(-\alpha, +\infty)$             & Non saturante    & Hidden, mean $\approx 0$ \\
+    SELU       & $(\approx{-1{,}76}, +\infty)$   & Self-norm.       & Reti senza BatchNorm \\
+    GELU       & $\approx(-0{,}17, +\infty)$     & Non mon.         & Transformer (BERT, GPT) \\
+    Sigmoid    & $(0, 1)$                         & Saturante        & Output prob.\ binaria, gate \\
+    Tanh       & $(-1, 1)$                        & Saturante        & RNN, output centrato \\
+    Softmax    & $(0,1)^C$, $\sum=1$              & Vettoriale       & Output multiclasse \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 \paragraph{Raccomandazioni operative.}
@@ -685,18 +685,18 @@ e del corso NYU-DL possono essere sintetizzate nella Tabella~\ref{tab:activation
 
 \begin{center}
 \small
-\begin{tabular}{lll}
+\begin{tabularx}{\linewidth}{l l X}
   \toprule
   \textbf{Problema} & \textbf{Causa} & \textbf{Soluzione} \\
   \midrule
-  Vanishing gradient  & Saturazione Sigmoid/Tanh    & ReLU, ELU, GELU \\
-  Dead neurons        & ReLU $=0$ per input neg.     & LReLU, PReLU, ELU \\
-  Output non centrato & ReLU $\geq 0$ sempre        & ELU, SELU, BatchNorm \\
-  Instabilità num.    & Exp. overflow in Softmax    & LogSoftmax, CrossEntropyLoss \\
-  Parametri extra     & PReLU ha $a$ apprendibile   & Beneficio: adattività \\
-  Non monotonicità    & GELU ha un ``dip''           & Proprietà regolatrice \\
+  Vanishing gradient  & Saturazione Sigmoid/Tanh  & ReLU, ELU, GELU \\
+  Dead neurons        & ReLU $=0$ per input neg.  & LReLU, PReLU, ELU \\
+  Output non centrato & ReLU $\geq 0$ sempre      & ELU, SELU, BatchNorm \\
+  Instabilità num.    & Exp.\ overflow in Softmax & LogSoftmax, CrossEntropyLoss \\
+  Parametri extra     & PReLU: $a$ apprendibile   & Beneficio: adattività \\
+  Non monotonicità    & GELU ha un ``dip''         & Proprietà regolatrice \\
   \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{center}
 
 Le funzioni di attivazione rappresentano uno degli assi portanti

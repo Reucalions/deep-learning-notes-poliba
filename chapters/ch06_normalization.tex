@@ -299,17 +299,17 @@ con $G = 1$ si ottiene Layer Norm.
   \caption{Confronto delle varianti di normalizzazione.}
   \label{tab:norm_comparison}
   \small
-  \begin{tabular}{lllll}
+  \begin{tabularx}{\linewidth}{l X c X l}
     \toprule
-    \textbf{Metodo} & \textbf{Calcola su} & \textbf{Dipende da $N$?}
+    \textbf{Metodo} & \textbf{Calcola su} & \textbf{Dip.\ $N$?}
       & \textbf{Uso tipico} & \textbf{PyTorch} \\
     \midrule
-    Batch Norm   & $N, H, W$ per canale  & Sì  & CNN classifica  & \texttt{BatchNorm2d} \\
-    Layer Norm   & $C, H, W$ per istanza & No  & Transformer, RNN & \texttt{LayerNorm} \\
-    Instance Norm & $H, W$ per (n,c)     & No  & Style transfer  & \texttt{InstanceNorm2d} \\
-    Group Norm   & gruppo di canali per istanza & No & Detection, segm. & \texttt{GroupNorm} \\
+    Batch Norm    & $N, H, W$ per canale         & Sì  & CNN classifica       & \texttt{BatchNorm2d} \\
+    Layer Norm    & $C, H, W$ per istanza        & No  & Transformer, RNN     & \texttt{LayerNorm} \\
+    Instance Norm & $H, W$ per (n,c)             & No  & Style transfer       & \texttt{InstanceNorm2d} \\
+    Group Norm    & Gruppo di canali per istanza & No  & Detection, segm.     & \texttt{GroupNorm} \\
     \bottomrule
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 
 %------------------------------------------------------------
